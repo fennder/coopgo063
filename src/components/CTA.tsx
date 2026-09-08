@@ -13,7 +13,7 @@ export function CTA() {
           Juntos, somos <span className="text-brand-green">mais fortes.</span>
         </h2>
         <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-          Conte com a CoopGO063 para fortalecer a mobilidade e construir novas oportunidades.
+          Conte com a Coop63 para fortalecer a mobilidade e construir novas oportunidades.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

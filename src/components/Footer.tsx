@@ -13,7 +13,7 @@ export function Footer() {
           <div className="space-y-6">
             <Logo className="text-white bg-white/5 p-4 rounded-xl inline-flex" />
             <p className="text-gray-400 text-sm leading-relaxed">
-              A CoopGO063 é uma cooperativa dedicada a transformar a mobilidade urbana, unindo motoristas e passageiros em um ambiente de segurança, respeito e qualidade.
+              A Coop63 é uma cooperativa dedicada a transformar a mobilidade urbana, unindo motoristas e passageiros em um ambiente de segurança, respeito e qualidade.
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-green transition-colors">
@@ -38,7 +38,7 @@ export function Footer() {
               <li><a href="#inicio" className="text-gray-400 hover:text-brand-green transition-colors">Início</a></li>
               <li><a href="#passageiros" className="text-gray-400 hover:text-brand-green transition-colors">Para Passageiros</a></li>
               <li><a href="#motoristas" className="text-gray-400 hover:text-brand-green transition-colors">Para Motoristas</a></li>
-              <li><a href="#sobre" className="text-gray-400 hover:text-brand-green transition-colors">Sobre a CoopGO063</a></li>
+              <li><a href="#sobre" className="text-gray-400 hover:text-brand-green transition-colors">Sobre a Coop63</a></li>
               <li><a href="#noticias" className="text-gray-400 hover:text-brand-green transition-colors">Notícias e Comunicados</a></li>
             </ul>
           </div>
@@ -56,7 +56,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-brand-green shrink-0" />
-                <span className="text-gray-400">contato@coopgo063.com.br</span>
+                <span className="text-gray-400">contato@coop63.com.br</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-brand-green shrink-0 mt-0.5" />
@@ -86,10 +86,10 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-sm">
-            &copy; {currentYear} CoopGO063. Todos os direitos reservados.
+            &copy; {currentYear} Coop63. Todos os direitos reservados.
           </p>
           <p className="text-brand-green font-medium text-sm text-center">
-            CoopGO063 — Juntos por uma mobilidade melhor!
+            Coop63 — Juntos por uma mobilidade melhor!
           </p>
           <div className="flex gap-4 text-sm">
             <a href="#" className="text-gray-500 hover:text-white transition-colors">Termos de Uso</a>

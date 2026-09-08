@@ -7,7 +7,7 @@ export function Testimonials() {
       id: 1,
       name: 'João Silva',
       role: 'Motorista Cooperado',
-      content: 'Fazer parte da CoopGO063 mudou minha realidade. A comissão é justa, o suporte é excelente e sinto que meu trabalho é realmente valorizado.',
+      content: 'Fazer parte da Coop63 mudou minha realidade. A comissão é justa, o suporte é excelente e sinto que meu trabalho é realmente valorizado.',
       rating: 5,
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80'
     },
@@ -23,7 +23,7 @@ export function Testimonials() {
       id: 3,
       name: 'Carlos Mendes',
       role: 'Motorista Cooperado',
-      content: 'A união faz a força. Com a CoopGO063, temos voz e conseguimos lutar por melhorias reais para a nossa categoria.',
+      content: 'A união faz a força. Com a Coop63, temos voz e conseguimos lutar por melhorias reais para a nossa categoria.',
       rating: 5,
       image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80'
     }
@@ -40,7 +40,7 @@ export function Testimonials() {
             O que dizem sobre nós
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Histórias de quem faz a mobilidade acontecer com a CoopGO063.
+            Histórias de quem faz a mobilidade acontecer com a Coop63.
           </p>
         </div>
 

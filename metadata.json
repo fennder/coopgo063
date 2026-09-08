@@ -1,6 +1,6 @@
 {
-  "name": "CoopGO063",
-  "description": "Site institucional da CoopGO063, cooperativa de mobilidade urbana para motoristas e passageiros.",
+  "name": "Coop63",
+  "description": "Site institucional da Coop63, cooperativa de mobilidade urbana para motoristas e passageiros.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"

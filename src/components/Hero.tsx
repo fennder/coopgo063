@@ -31,7 +31,7 @@ export function Hero() {
             Motoristas e passageiros juntos.
           </h2>
           <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed">
-            A CoopGO063 é uma cooperativa que fortalece a mobilidade urbana, oferecendo mais segurança, qualidade, informação e suporte para motoristas e passageiros de aplicativo.
+            A Coop63 é uma cooperativa que fortalece a mobilidade urbana, oferecendo mais segurança, qualidade, informação e suporte para motoristas e passageiros de aplicativo.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">

@@ -18,7 +18,7 @@ export function Header() {
     { label: 'Início', href: '#inicio' },
     { label: 'Passageiros', href: '#passageiros' },
     { label: 'Motoristas', href: '#motoristas' },
-    { label: 'A Coop', href: '#sobre' },
+    { label: 'A Coop63', href: '#sobre' },
     { label: 'Notícias', href: '#noticias' },
     { label: 'Contato', href: '#contato' },
   ];

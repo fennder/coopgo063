@@ -44,7 +44,7 @@ export function Contact() {
               </div>
               <div>
                 <h4 className="font-bold text-brand-navy text-lg mb-1">E-mail</h4>
-                <p className="text-gray-600 text-sm">contato@coopgo063.com.br</p>
+                <p className="text-gray-600 text-sm">contato@coop63.com.br</p>
               </div>
             </div>
 

@@ -16,7 +16,7 @@ export function News() {
       image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       category: 'Motoristas',
       title: 'Campanha: Motorista Valorizado',
-      summary: 'A CoopGO063 valoriza quem move a nossa cidade! Participe da campanha.',
+      summary: 'A Coop63 valoriza quem move a nossa cidade! Participe da campanha.',
       date: '10 de abril de 2026',
     },
     {
@@ -30,7 +30,7 @@ export function News() {
     {
       id: 4,
       image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      category: 'CoopGO063',
+      category: 'Coop63',
       title: 'Assembleia Geral Ordinária',
       summary: 'Participe da nossa assembleia e ajude a construir um futuro melhor.',
       date: '28 de março de 2026',
@@ -47,7 +47,7 @@ export function News() {
               <h2 className="text-3xl md:text-4xl font-extrabold text-white">Notícias e Comunicados</h2>
             </div>
             <p className="text-gray-400 text-lg">
-              Fique por dentro das novidades, campanhas e informações da CoopGO063.
+              Fique por dentro das novidades, campanhas e informações da Coop63.
             </p>
           </div>
           <button className="hidden md:inline-flex items-center gap-2 border border-gray-600 hover:border-brand-green text-white px-6 py-3 rounded-full transition-colors whitespace-nowrap">
