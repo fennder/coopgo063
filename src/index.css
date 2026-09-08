@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-green: #00B853;
+  --color-brand-green-hover: #009643;
+  --color-brand-navy: #0B2136;
+  --color-brand-navy-light: #15324E;
+}
+
+@layer base {
+  html {
+    scroll-padding-top: 5rem;
+  }
+}
