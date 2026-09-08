@@ -9,8 +9,8 @@ export function Logo({ className = '' }: { className?: string }) {
         <Navigation className="text-brand-green w-4 h-4 absolute bottom-2 right-2 rotate-45" />
       </div>
       <div className="flex flex-col leading-none">
-        <span className="text-brand-green text-xl tracking-wider uppercase">Coop63</span>
-        <span className="text-brand-navy text-lg tracking-widest uppercase font-black">GO<span className="text-gray-500">063</span></span>
+        <span className="text-brand-green text-xl tracking-wider uppercase">Coop/span>
+        <span className="text-brand-navy text-lg tracking-widest uppercase font-black"><span className="text-gray-500">63</span></span>
       </div>
     </div>
   );
