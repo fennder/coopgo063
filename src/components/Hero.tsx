@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { User, Car } from 'lucide-react';
 
 export function Hero() {
@@ -35,20 +36,20 @@ export function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <a 
-              href="#passageiros" 
+            <Link 
+              to="/passageiros" 
               className="flex items-center justify-center gap-3 bg-brand-green hover:bg-brand-green-hover text-white px-8 py-4 rounded-full font-bold text-lg transition-transform hover:scale-105 shadow-lg"
             >
               <User className="w-6 h-6" />
               <span>Sou Passageiro</span>
-            </a>
-            <a 
-              href="#motoristas" 
+            </Link>
+            <Link 
+              to="/motoristas" 
               className="flex items-center justify-center gap-3 bg-white hover:bg-gray-100 text-brand-navy px-8 py-4 rounded-full font-bold text-lg transition-transform hover:scale-105 shadow-lg"
             >
               <Car className="w-6 h-6" />
               <span>Sou Motorista</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

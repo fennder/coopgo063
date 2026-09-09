@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { User, CheckCircle2, ShieldCheck, Clock, Info } from 'lucide-react';
 
 export function Passengers() {
@@ -48,15 +49,15 @@ export function Passengers() {
               ))}
             </ul>
 
-            <a 
-              href="#contato" 
+            <Link 
+              to="/contato" 
               className="inline-flex items-center gap-2 bg-brand-navy hover:bg-brand-navy-light text-white px-8 py-4 rounded-full font-bold text-lg transition-colors shadow-md"
             >
               <span>Saiba mais</span>
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

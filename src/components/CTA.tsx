@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { MessageCircle, UserPlus } from 'lucide-react';
 
 export function CTA() {
@@ -17,20 +18,20 @@ export function CTA() {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a 
-            href="#contato" 
+          <Link 
+            to="/contato" 
             className="flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-green-hover text-white px-8 py-4 rounded-full font-bold text-lg transition-transform hover:-translate-y-1 shadow-lg"
           >
             <MessageCircle className="w-5 h-5" />
             <span>Fale Conosco</span>
-          </a>
-          <a 
-            href="#motoristas" 
+          </Link>
+          <Link 
+            to="/motoristas" 
             className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-4 rounded-full font-bold text-lg transition-transform hover:-translate-y-1 backdrop-blur-sm"
           >
             <UserPlus className="w-5 h-5" />
             <span>Quero ser cooperado</span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

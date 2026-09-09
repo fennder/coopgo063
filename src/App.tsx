@@ -4,34 +4,28 @@
  */
 
 import React from 'react';
-import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { Passengers } from './components/Passengers';
-import { Drivers } from './components/Drivers';
-import { About } from './components/About';
-import { Testimonials } from './components/Testimonials';
-import { News } from './components/News';
-import { CTA } from './components/CTA';
-import { Contact } from './components/Contact';
-import { Footer } from './components/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Layout } from './layouts/Layout';
+import { Home } from './pages/Home';
+import { PassengersPage } from './pages/PassengersPage';
+import { DriversPage } from './pages/DriversPage';
+import { AboutPage } from './pages/AboutPage';
+import { NewsPage } from './pages/NewsPage';
+import { ContactPage } from './pages/ContactPage';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white font-sans text-gray-900 scroll-smooth">
-      <Header />
-      
-      <main>
-        <Hero />
-        <Passengers />
-        <Drivers />
-        <About />
-        <Testimonials />
-        <News />
-        <CTA />
-        <Contact />
-      </main>
-
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="passageiros" element={<PassengersPage />} />
+          <Route path="motoristas" element={<DriversPage />} />
+          <Route path="sobre" element={<AboutPage />} />
+          <Route path="noticias" element={<NewsPage />} />
+          <Route path="contato" element={<ContactPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
