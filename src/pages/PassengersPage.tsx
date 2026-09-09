@@ -1,4 +1,5 @@
 import React from 'react';
+import passImgSrc from '../assets/images/passenger_coop63_1788912377837.jpg';
 import { ShieldCheck, Clock, MapPin, CheckCircle2, Star, Smartphone } from 'lucide-react';
 import { CTA } from '../components/CTA';
 
@@ -17,7 +18,7 @@ export function PassengersPage() {
       {/* Hero Section */}
       <section className="bg-brand-navy py-20 lg:py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
-          <img src="https://images.unsplash.com/photo-1593950315186-76a92975b60c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Background" className="w-full h-full object-cover" />
+          <img src={passImgSrc} alt="Background" className="w-full h-full object-cover" />
         </div>
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6">

@@ -1,4 +1,5 @@
 import React from 'react';
+import drvImgSrc from '../assets/images/driver_coop63_1788912389552.jpg';
 import { DollarSign, ShieldAlert, BookOpen, Users, Award, HeadphonesIcon } from 'lucide-react';
 import { CTA } from '../components/CTA';
 
@@ -17,7 +18,7 @@ export function DriversPage() {
       {/* Hero Section */}
       <section className="bg-brand-navy py-20 lg:py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
-          <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Background" className="w-full h-full object-cover" />
+          <img src={drvImgSrc} alt="Background" className="w-full h-full object-cover" />
         </div>
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6">

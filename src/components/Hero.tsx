@@ -1,4 +1,5 @@
 import React from 'react';
+import heroBg from '../assets/images/hero_coop63_1788912367838.jpg';
 import { Link } from 'react-router-dom';
 import { User, Car } from 'lucide-react';
 
@@ -9,7 +10,7 @@ export function Hero() {
       <div 
         className="absolute inset-0 z-0 opacity-40 mix-blend-overlay"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80")',
+          backgroundImage: `url(${heroBg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

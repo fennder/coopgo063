@@ -1,4 +1,5 @@
 import React from 'react';
+import passImgSrc from '../assets/images/passenger_coop63_1788912377837.jpg';
 import { Link } from 'react-router-dom';
 import { User, CheckCircle2, ShieldCheck, Clock, Info } from 'lucide-react';
 
@@ -18,7 +19,7 @@ export function Passengers() {
           <div className="w-full lg:w-1/2">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] group">
               <img 
-                src="https://images.unsplash.com/photo-1593950315186-76a92975b60c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                src={passImgSrc} 
                 alt="Passageira usando aplicativo" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />

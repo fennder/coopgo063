@@ -1,4 +1,5 @@
 import React from 'react';
+import newsAppImg from '../assets/images/news_app_coop63_1788912399020.jpg';
 import { ArrowRight, Search } from 'lucide-react';
 import { CTA } from '../components/CTA';
 
@@ -6,7 +7,7 @@ export function NewsPage() {
   const allNewsItems = [
     {
       id: 1,
-      image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: newsAppImg,
       category: 'Comunicado',
       title: 'Novos pontos de embarque e desembarque',
       summary: 'Confira os novos pontos de apoio para mais comodidade nas suas viagens. Mapeamos os locais mais estratégicos da cidade.',
