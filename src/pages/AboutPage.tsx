@@ -27,16 +27,31 @@ export function AboutPage() {
       {/* Content */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mx-auto text-lg text-gray-600 space-y-6 leading-relaxed">
-            <p>
-              A <strong>Coop63</strong> nasceu da necessidade de criar um ambiente mais justo, seguro e rentável para os motoristas de aplicativo, sem esquecer da excelência no atendimento aos passageiros. Observando as altas taxas cobradas por plataformas tradicionais e o distanciamento no suporte ao motorista, um grupo de profissionais se reuniu com um objetivo claro: fazer diferente.
-            </p>
-            <p>
-              Somos uma cooperativa. Isso significa que não temos "donos" no modelo tradicional, mas sim cooperados. O sucesso do negócio é distribuído de forma justa entre todos que contribuem diariamente para manter a cidade em movimento.
-            </p>
-            <p>
-              Nossa missão é oferecer uma tecnologia de ponta que conecte pessoas, fomentando o desenvolvimento local e garantindo que os recursos circulem na nossa região, fortalecendo a economia e a comunidade.
-            </p>
+          <div className="flex flex-col lg:flex-row items-center gap-12 max-w-5xl mx-auto">
+            <div className="w-full lg:w-1/3 flex justify-center">
+              <div className="relative group">
+                <div className="absolute -inset-2 bg-gradient-to-tr from-brand-green to-brand-navy rounded-full blur-xl opacity-20 group-hover:opacity-35 transition" />
+                <div className="relative w-52 h-52 sm:w-60 sm:h-60 rounded-full p-4 bg-white border border-gray-100 shadow-xl flex items-center justify-center">
+                  <img
+                    src="/logo.png"
+                    alt="Logo Oficial Coop63"
+                    className="w-full h-full object-contain drop-shadow-md transition-transform duration-500 group-hover:scale-105"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="w-full lg:w-2/3 text-lg text-gray-600 space-y-6 leading-relaxed">
+              <p>
+                A <strong>Coop63</strong> nasceu da necessidade de criar um ambiente mais justo, seguro e rentável para os motoristas de aplicativo, sem esquecer da excelência no atendimento aos passageiros. Observando as altas taxas cobradas por plataformas tradicionais e o distanciamento no suporte ao motorista, um grupo de profissionais se reuniu com um objetivo claro: fazer diferente.
+              </p>
+              <p>
+                Somos uma cooperativa. Isso significa que não temos "donos" no modelo tradicional, mas sim cooperados. O sucesso do negócio é distribuído de forma justa entre todos que contribuem diariamente para manter a cidade em movimento.
+              </p>
+              <p>
+                Nossa missão é oferecer uma tecnologia de ponta que conecte pessoas, fomentando o desenvolvimento local e garantindo que os recursos circulem na nossa região, fortalecendo a economia e a comunidade.
+              </p>
+            </div>
           </div>
         </div>
       </section>

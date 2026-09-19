@@ -11,7 +11,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand Info */}
           <div className="space-y-6">
-            <Logo className="text-white bg-white/5 p-4 rounded-xl inline-flex" />
+            <Logo size="lg" inverted={true} className="text-white bg-white/5 p-4 rounded-2xl inline-flex border border-white/10" />
             <p className="text-gray-400 text-sm leading-relaxed">
               A Coop63 é uma cooperativa dedicada a transformar a mobilidade urbana, unindo motoristas e passageiros em um ambiente de segurança, respeito e qualidade.
             </p>

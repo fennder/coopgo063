@@ -2,6 +2,7 @@ import React from 'react';
 import passImgSrc from '../assets/images/passenger_coop63_1788912377837.jpg';
 import { ShieldCheck, Clock, MapPin, CheckCircle2, Star, Smartphone } from 'lucide-react';
 import { CTA } from '../components/CTA';
+import { AppDownload } from '../components/AppDownload';
 
 export function PassengersPage() {
   const features = [
@@ -51,6 +52,7 @@ export function PassengersPage() {
         </div>
       </section>
 
+      <AppDownload />
       <CTA />
     </div>
   );

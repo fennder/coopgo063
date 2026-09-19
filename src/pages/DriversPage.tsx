@@ -2,6 +2,7 @@ import React from 'react';
 import drvImgSrc from '../assets/images/driver_coop63_1788912389552.jpg';
 import { DollarSign, ShieldAlert, BookOpen, Users, Award, HeadphonesIcon } from 'lucide-react';
 import { CTA } from '../components/CTA';
+import { AppDownload } from '../components/AppDownload';
 
 export function DriversPage() {
   const benefits = [
@@ -51,6 +52,7 @@ export function DriversPage() {
         </div>
       </section>
 
+      <AppDownload />
       <CTA />
     </div>
   );

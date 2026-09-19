@@ -25,32 +25,51 @@ export function Hero() {
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-30">
-        <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-4">
-            Mobilidade que <span className="text-brand-green">conecta.</span>
-          </h1>
-          <h2 className="text-2xl md:text-3xl font-semibold text-gray-200 mb-6">
-            Motoristas e passageiros juntos.
-          </h2>
-          <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed">
-            A Coop63 é uma cooperativa que fortalece a mobilidade urbana, oferecendo mais segurança, qualidade, informação e suporte para motoristas e passageiros de aplicativo.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link 
-              to="/passageiros" 
-              className="flex items-center justify-center gap-3 bg-brand-green hover:bg-brand-green-hover text-white px-8 py-4 rounded-full font-bold text-lg transition-transform hover:scale-105 shadow-lg"
-            >
-              <User className="w-6 h-6" />
-              <span>Sou Passageiro</span>
-            </Link>
-            <Link 
-              to="/motoristas" 
-              className="flex items-center justify-center gap-3 bg-white hover:bg-gray-100 text-brand-navy px-8 py-4 rounded-full font-bold text-lg transition-transform hover:scale-105 shadow-lg"
-            >
-              <Car className="w-6 h-6" />
-              <span>Sou Motorista</span>
-            </Link>
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+          <div className="max-w-2xl">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-4">
+              Mobilidade que <span className="text-brand-green">conecta.</span>
+            </h1>
+            <h2 className="text-2xl md:text-3xl font-semibold text-gray-200 mb-6">
+              Motoristas e passageiros juntos.
+            </h2>
+            <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed">
+              A Coop63 é uma cooperativa que fortalece a mobilidade urbana, oferecendo mais segurança, qualidade, informação e suporte para motoristas e passageiros de aplicativo.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link 
+                to="/passageiros" 
+                className="flex items-center justify-center gap-3 bg-brand-green hover:bg-brand-green-hover text-white px-8 py-4 rounded-full font-bold text-lg transition-transform hover:scale-105 shadow-lg"
+              >
+                <User className="w-6 h-6" />
+                <span>Sou Passageiro</span>
+              </Link>
+              <Link 
+                to="/motoristas" 
+                className="flex items-center justify-center gap-3 bg-white hover:bg-gray-100 text-brand-navy px-8 py-4 rounded-full font-bold text-lg transition-transform hover:scale-105 shadow-lg"
+              >
+                <Car className="w-6 h-6" />
+                <span>Sou Motorista</span>
+              </Link>
+            </div>
+          </div>
+
+          <div className="hidden lg:flex flex-col items-center justify-center relative">
+            <div className="relative group">
+              <div className="absolute -inset-4 bg-gradient-to-tr from-brand-green to-emerald-400 rounded-full blur-2xl opacity-30 group-hover:opacity-50 transition duration-500" />
+              <div className="relative w-64 h-64 xl:w-72 xl:h-72 rounded-full p-4 bg-white/10 backdrop-blur-md border border-white/20 shadow-2xl flex items-center justify-center">
+                <img
+                  src="/logo.png"
+                  alt="Coop63 - Cooperativa de Mobilidade"
+                  className="w-full h-full object-contain drop-shadow-2xl transition-transform duration-500 group-hover:scale-105"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+            </div>
+            <div className="mt-4 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/90 text-sm font-semibold tracking-wide">
+              Cooperativa Oficial
+            </div>
           </div>
         </div>
       </div>

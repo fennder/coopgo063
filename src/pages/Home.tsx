@@ -5,6 +5,7 @@ import { Drivers } from '../components/Drivers';
 import { About } from '../components/About';
 import { Testimonials } from '../components/Testimonials';
 import { News } from '../components/News';
+import { AppDownload } from '../components/AppDownload';
 import { CTA } from '../components/CTA';
 import { Contact } from '../components/Contact';
 
@@ -16,6 +17,7 @@ export function Home() {
       <Drivers />
       <About />
       <Testimonials />
+      <AppDownload />
       <News />
       <CTA />
       <Contact />
