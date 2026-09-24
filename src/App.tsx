@@ -11,7 +11,9 @@ import { PassengersPage } from './pages/PassengersPage';
 import { DriversPage } from './pages/DriversPage';
 import { AboutPage } from './pages/AboutPage';
 import { NewsPage } from './pages/NewsPage';
+import { NewsDetailPage } from './pages/NewsDetailPage';
 import { ContactPage } from './pages/ContactPage';
+import { NotFoundPage } from './pages/NotFoundPage';
 
 const router = createBrowserRouter([
   {
@@ -23,7 +25,9 @@ const router = createBrowserRouter([
       { path: "motoristas", element: <DriversPage /> },
       { path: "sobre", element: <AboutPage /> },
       { path: "noticias", element: <NewsPage /> },
+      { path: "noticias/:id", element: <NewsDetailPage /> },
       { path: "contato", element: <ContactPage /> },
+      { path: "*", element: <NotFoundPage /> },
     ]
   }
 ]);

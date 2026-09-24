@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import passImgSrc from '../assets/images/passenger_coop63_1788912377837.jpg';
-import { ShieldCheck, Clock, MapPin, CheckCircle2, Star, Smartphone } from 'lucide-react';
+import { ShieldCheck, Clock, MapPin, CheckCircle2, Star, Smartphone, ChevronRight } from 'lucide-react';
 import { CTA } from '../components/CTA';
 import { AppDownload } from '../components/AppDownload';
 
@@ -16,10 +17,21 @@ export function PassengersPage() {
 
   return (
     <div>
+      {/* Breadcrumb Header */}
+      <div className="bg-gray-100 border-b border-gray-200 py-3.5">
+        <div className="container mx-auto px-4 md:px-6">
+          <nav className="flex items-center gap-2 text-sm text-gray-500">
+            <Link to="/" className="hover:text-brand-green transition-colors">Início</Link>
+            <ChevronRight className="w-4 h-4" />
+            <span className="text-brand-navy font-semibold">Para Passageiros</span>
+          </nav>
+        </div>
+      </div>
+
       {/* Hero Section */}
-      <section className="bg-brand-navy py-20 lg:py-32 relative overflow-hidden">
+      <section className="bg-brand-navy py-20 lg:py-28 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
-          <img src={passImgSrc} alt="Background" className="w-full h-full object-cover" />
+          <img src={passImgSrc} alt="Passageiros Coop63" className="w-full h-full object-cover" />
         </div>
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6">

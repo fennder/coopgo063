@@ -2,31 +2,35 @@ import React from 'react';
 
 interface LogoProps {
   className?: string;
-  size?: 'sm' | 'md' | 'lg' | 'xl';
+  imgClassName?: string;
+  size?: 'sm' | 'md' | 'lg' | 'xl' | 'header' | 'full';
   showText?: boolean;
   inverted?: boolean;
 }
 
 export function Logo({
   className = '',
+  imgClassName = '',
   size = 'md',
-  showText = true,
+  showText = false,
   inverted = false,
 }: LogoProps) {
   const sizeMap = {
     sm: 'w-9 h-9',
-    md: 'w-12 h-12',
+    md: 'w-[58px] h-[58px]',
     lg: 'w-16 h-16',
     xl: 'w-24 h-24',
+    header: 'h-[56px] lg:h-[72px] w-[56px] lg:w-[72px]',
+    full: 'h-full w-auto aspect-square max-h-full',
   };
 
   return (
     <div className={`flex items-center gap-3 font-bold select-none ${className}`}>
-      <div className="relative shrink-0">
+      <div className="relative shrink-0 flex items-center h-full">
         <img
           src="/logo.png"
           alt="Coop63 Logo"
-          className={`${sizeMap[size]} object-contain drop-shadow-md rounded-full transition-transform hover:scale-105`}
+          className={`${sizeMap[size] || ''} ${imgClassName} object-contain drop-shadow-md rounded-full transition-transform hover:scale-105`}
           referrerPolicy="no-referrer"
         />
       </div>

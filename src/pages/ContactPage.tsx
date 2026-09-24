@@ -1,10 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { ChevronRight } from 'lucide-react';
 import { Contact } from '../components/Contact';
 
 export function ContactPage() {
   return (
     <div>
-      <section className="bg-brand-navy pt-20 pb-10">
+      {/* Breadcrumb Header */}
+      <div className="bg-gray-100 border-b border-gray-200 py-3.5">
+        <div className="container mx-auto px-4 md:px-6">
+          <nav className="flex items-center gap-2 text-sm text-gray-500">
+            <Link to="/" className="hover:text-brand-green transition-colors">Início</Link>
+            <ChevronRight className="w-4 h-4" />
+            <span className="text-brand-navy font-semibold">Contato e Suporte</span>
+          </nav>
+        </div>
+      </div>
+
+      <section className="bg-brand-navy pt-20 pb-12">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
             Fale com a <span className="text-brand-green">Nossa Equipe</span>

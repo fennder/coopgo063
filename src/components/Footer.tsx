@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Youtube, MapPin, Phone, Mail } from 'lucide-react';
 import { Logo } from './Logo';
 
@@ -11,7 +12,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand Info */}
           <div className="space-y-6">
-            <Logo size="lg" inverted={true} className="text-white bg-white/5 p-4 rounded-2xl inline-flex border border-white/10" />
+            <Link to="/" className="inline-block" aria-label="Página Inicial">
+              <Logo size="lg" inverted={true} className="text-white bg-white/5 p-4 rounded-2xl inline-flex border border-white/10 hover:bg-white/10 transition-colors" />
+            </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
               A Coop63 é uma cooperativa dedicada a transformar a mobilidade urbana, unindo motoristas e passageiros em um ambiente de segurança, respeito e qualidade.
             </p>
@@ -35,11 +38,12 @@ export function Footer() {
               <span className="absolute -bottom-2 left-0 w-12 h-1 bg-brand-green rounded-full"></span>
             </h4>
             <ul className="space-y-3">
-              <li><a href="#inicio" className="text-gray-400 hover:text-brand-green transition-colors">Início</a></li>
-              <li><a href="#passageiros" className="text-gray-400 hover:text-brand-green transition-colors">Para Passageiros</a></li>
-              <li><a href="#motoristas" className="text-gray-400 hover:text-brand-green transition-colors">Para Motoristas</a></li>
-              <li><a href="#sobre" className="text-gray-400 hover:text-brand-green transition-colors">Sobre a Coop63</a></li>
-              <li><a href="#noticias" className="text-gray-400 hover:text-brand-green transition-colors">Notícias e Comunicados</a></li>
+              <li><Link to="/" className="text-gray-400 hover:text-brand-green transition-colors">Início</Link></li>
+              <li><Link to="/passageiros" className="text-gray-400 hover:text-brand-green transition-colors">Para Passageiros</Link></li>
+              <li><Link to="/motoristas" className="text-gray-400 hover:text-brand-green transition-colors">Para Motoristas</Link></li>
+              <li><Link to="/sobre" className="text-gray-400 hover:text-brand-green transition-colors">Sobre a Coop63</Link></li>
+              <li><Link to="/noticias" className="text-gray-400 hover:text-brand-green transition-colors">Notícias e Comunicados</Link></li>
+              <li><Link to="/contato" className="text-gray-400 hover:text-brand-green transition-colors">Fale Conosco</Link></li>
             </ul>
           </div>
 

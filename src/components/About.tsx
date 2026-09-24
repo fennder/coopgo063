@@ -23,7 +23,7 @@ export function About() {
               Somos uma cooperativa de motoristas de aplicativo criada para unir forças, gerar oportunidades e contribuir para uma mobilidade de qualidade para todos.
             </p>
             <Link 
-              to="/contato" 
+              to="/sobre" 
               className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green-hover text-white px-8 py-4 rounded-full font-bold transition-colors shadow-md"
             >
               <span>Conheça a Coop63</span>

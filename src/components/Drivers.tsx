@@ -52,10 +52,10 @@ export function Drivers() {
             </ul>
 
             <Link 
-              to="/contato" 
+              to="/motoristas" 
               className="inline-flex items-center gap-2 bg-brand-navy hover:bg-brand-navy-light text-white px-8 py-4 rounded-full font-bold text-lg transition-colors shadow-md"
             >
-              <span>Quero fazer parte</span>
+              <span>Vantagens para Motoristas</span>
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>

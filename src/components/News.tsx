@@ -1,42 +1,10 @@
 import React from 'react';
-import newsAppImg from '../assets/images/news_app_coop63_1788912399020.jpg';
+import { Link } from 'react-router-dom';
 import { Megaphone, ArrowRight } from 'lucide-react';
+import { newsArticles } from '../data/newsData';
 
 export function News() {
-  const newsItems = [
-    {
-      id: 1,
-      image: newsAppImg,
-      category: 'Comunicado',
-      title: 'Novos pontos de embarque e desembarque',
-      summary: 'Confira os novos pontos de apoio para mais comodidade nas suas viagens.',
-      date: '15 de abril de 2026',
-    },
-    {
-      id: 2,
-      image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      category: 'Motoristas',
-      title: 'Campanha: Motorista Valorizado',
-      summary: 'A Coop63 valoriza quem move a nossa cidade! Participe da campanha.',
-      date: '10 de abril de 2026',
-    },
-    {
-      id: 3,
-      image: 'https://images.unsplash.com/photo-1512428559087-560fa5ceab42?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      category: 'Passageiros',
-      title: 'Dicas de segurança para suas viagens',
-      summary: 'Confira nossas recomendações para uma viagem ainda mais segura.',
-      date: '05 de abril de 2026',
-    },
-    {
-      id: 4,
-      image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      category: 'Coop63',
-      title: 'Assembleia Geral Ordinária',
-      summary: 'Participe da nossa assembleia e ajude a construir um futuro melhor.',
-      date: '28 de março de 2026',
-    },
-  ];
+  const newsItems = newsArticles.slice(0, 4);
 
   return (
     <section id="noticias" className="py-24 bg-brand-navy">
@@ -51,16 +19,19 @@ export function News() {
               Fique por dentro das novidades, campanhas e informações da Coop63.
             </p>
           </div>
-          <button className="hidden md:inline-flex items-center gap-2 border border-gray-600 hover:border-brand-green text-white px-6 py-3 rounded-full transition-colors whitespace-nowrap">
+          <Link 
+            to="/noticias" 
+            className="hidden md:inline-flex items-center gap-2 border border-gray-600 hover:border-brand-green hover:text-brand-green text-white px-6 py-3 rounded-full transition-colors whitespace-nowrap font-medium"
+          >
             <span>Ver todas as notícias</span>
             <ArrowRight className="w-4 h-4" />
-          </button>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {newsItems.map((item) => (
-            <div key={item.id} className="bg-white rounded-2xl overflow-hidden shadow-lg group hover:-translate-y-1 transition-transform duration-300">
-              <div className="relative h-48 overflow-hidden">
+            <div key={item.id} className="bg-white rounded-2xl overflow-hidden shadow-lg group hover:-translate-y-1 transition-transform duration-300 flex flex-col">
+              <Link to={`/noticias/${item.id}`} className="relative h-48 overflow-hidden block">
                 <img 
                   src={item.image} 
                   alt={item.title} 
@@ -69,24 +40,29 @@ export function News() {
                 <div className="absolute top-4 left-4 bg-brand-green text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                   {item.category}
                 </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-brand-navy mb-3 line-clamp-2 group-hover:text-brand-green transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 mb-6 line-clamp-3 text-sm">
+              </Link>
+              <div className="p-6 flex flex-col flex-grow">
+                <Link to={`/noticias/${item.id}`} className="block">
+                  <h3 className="text-xl font-bold text-brand-navy mb-3 line-clamp-2 group-hover:text-brand-green transition-colors">
+                    {item.title}
+                  </h3>
+                </Link>
+                <p className="text-gray-600 mb-6 line-clamp-3 text-sm flex-grow">
                   {item.summary}
                 </p>
-                <div className="flex items-center justify-between text-sm">
+                <div className="flex items-center justify-between text-sm mt-auto pt-2 border-t border-gray-100">
                   <span className="text-gray-400 flex items-center gap-2">
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
                     {item.date}
                   </span>
-                  <button className="text-brand-navy font-bold hover:text-brand-green transition-colors inline-flex items-center gap-1">
+                  <Link 
+                    to={`/noticias/${item.id}`}
+                    className="text-brand-navy font-bold hover:text-brand-green transition-colors inline-flex items-center gap-1"
+                  >
                     Ler mais <ArrowRight className="w-4 h-4" />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -94,10 +70,13 @@ export function News() {
         </div>
 
         <div className="mt-10 text-center md:hidden">
-          <button className="inline-flex items-center gap-2 border border-gray-600 hover:border-brand-green text-white px-8 py-3 rounded-full transition-colors w-full justify-center">
+          <Link 
+            to="/noticias" 
+            className="inline-flex items-center gap-2 border border-gray-600 hover:border-brand-green text-white px-8 py-3 rounded-full transition-colors w-full justify-center font-medium"
+          >
             <span>Ver todas as notícias</span>
             <ArrowRight className="w-4 h-4" />
-          </button>
+          </Link>
         </div>
       </div>
     </section>

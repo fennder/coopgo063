@@ -55,10 +55,10 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="hidden lg:flex flex-col items-center justify-center relative">
+          <div className="hidden lg:flex flex-col items-center justify-center relative shrink-0">
             <div className="relative group">
-              <div className="absolute -inset-4 bg-gradient-to-tr from-brand-green to-emerald-400 rounded-full blur-2xl opacity-30 group-hover:opacity-50 transition duration-500" />
-              <div className="relative w-64 h-64 xl:w-72 xl:h-72 rounded-full p-4 bg-white/10 backdrop-blur-md border border-white/20 shadow-2xl flex items-center justify-center">
+              <div className="absolute -inset-6 bg-gradient-to-tr from-brand-green to-emerald-400 rounded-full blur-3xl opacity-35 group-hover:opacity-55 transition duration-500" />
+              <div className="relative w-96 h-96 xl:w-[432px] xl:h-[432px] rounded-full p-6 bg-white/10 backdrop-blur-md border border-white/20 shadow-2xl flex items-center justify-center">
                 <img
                   src="/logo.png"
                   alt="Coop63 - Cooperativa de Mobilidade"
@@ -67,7 +67,7 @@ export function Hero() {
                 />
               </div>
             </div>
-            <div className="mt-4 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/90 text-sm font-semibold tracking-wide">
+            <div className="mt-5 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/95 text-sm font-bold tracking-wide uppercase shadow-lg">
               Cooperativa Oficial
             </div>
           </div>
