@@ -94,16 +94,29 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
           <p className="text-gray-500 text-sm">
             &copy; {currentYear} Coop63. Todos os direitos reservados.
           </p>
           <p className="text-brand-green font-medium text-sm text-center">
             Coop63 — Juntos por uma mobilidade melhor!
           </p>
-          <div className="flex gap-4 text-sm">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-sm">
             <a href="#" className="text-gray-500 hover:text-white transition-colors">Termos de Uso</a>
+            <span className="text-gray-700">•</span>
             <a href="#" className="text-gray-500 hover:text-white transition-colors">Privacidade</a>
+            <span className="text-gray-700">•</span>
+            <span className="text-gray-400">
+              Desenvolvido por{' '}
+              <a 
+                href="https://abrindoportas.tec.br" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-brand-green hover:underline font-medium"
+              >
+                abrindoportas.tec.br
+              </a>
+            </span>
           </div>
         </div>
       </div>
