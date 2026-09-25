@@ -19,13 +19,19 @@ export function Footer() {
               A Coop63 é uma cooperativa dedicada a transformar a mobilidade urbana, unindo motoristas e passageiros em um ambiente de segurança, respeito e qualidade.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-green transition-colors">
+              <a 
+                href="https://www.instagram.com/coopgo063?stkn=MXJ0NGRocGRjZDk1bw==" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Instagram da Coop63"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-green transition-colors"
+              >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-green transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-green transition-colors" aria-label="Facebook">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-green transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-green transition-colors" aria-label="YouTube">
                 <Youtube className="w-5 h-5" />
               </a>
             </div>
