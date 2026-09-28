@@ -1,21 +1,21 @@
 import React from 'react';
-import heroBg from '../assets/images/hero_coop63_1788912367838.jpg';
+import heroBg from '../assets/images/hero_coop63_branded.jpg';
 import { Link } from 'react-router-dom';
-import { User, Car } from 'lucide-react';
+import { User, Car, Globe } from 'lucide-react';
 
 export function Hero() {
   return (
     <section id="inicio" className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-brand-navy">
-      {/* Background Image & Overlay */}
+      {/* Background Image & Overlay with 70% opacity, featuring coop63.coop.br exclusively */}
       <div 
-        className="absolute inset-0 z-0 opacity-40 mix-blend-overlay"
+        className="absolute inset-0 z-0 opacity-70 transition-opacity duration-700"
         style={{
           backgroundImage: `url(${heroBg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       />
-      <div className="absolute inset-0 z-10 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-transparent" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-r from-brand-navy/95 via-brand-navy/70 to-transparent" />
       
       {/* Curved Bottom Shape */}
       <div className="absolute bottom-0 left-0 right-0 z-20">
@@ -27,6 +27,14 @@ export function Hero() {
       <div className="container mx-auto px-4 md:px-6 relative z-30">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className="max-w-2xl">
+            {/* Domain Pill Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-green/20 border border-brand-green/40 text-brand-green text-sm font-extrabold mb-6 backdrop-blur-sm shadow-sm">
+              <Globe className="w-4 h-4 text-brand-green" />
+              <span>coop63.coop.br</span>
+              <span className="text-white/40">•</span>
+              <span className="text-gray-200 font-semibold text-xs uppercase tracking-wider">Oficial</span>
+            </div>
+
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-4">
               Mobilidade que <span className="text-brand-green">conecta.</span>
             </h1>
@@ -67,9 +75,11 @@ export function Hero() {
                 />
               </div>
             </div>
-            <div className="mt-5 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-brand-green/30 text-white text-sm font-bold tracking-wide uppercase shadow-lg flex items-center gap-2">
+            <div className="mt-5 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-brand-green/30 text-white text-sm font-bold tracking-wide shadow-lg flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-brand-green animate-pulse" />
-              Cooperativa Oficial
+              <span className="font-extrabold text-brand-green">coop63.coop.br</span>
+              <span className="text-white/40">•</span>
+              <span className="text-xs uppercase tracking-wider text-gray-300">Cooperativa Oficial</span>
             </div>
           </div>
         </div>
