@@ -60,7 +60,7 @@ export function NewsPage() {
                     onClick={() => setSelectedCategory(cat)}
                     className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors whitespace-nowrap ${
                       isActive
-                        ? 'bg-brand-green text-white shadow-sm'
+                        ? 'bg-brand-green text-brand-navy font-bold shadow-sm'
                         : 'bg-white border border-gray-200 text-gray-700 hover:border-brand-green hover:text-brand-green'
                     }`}
                   >
@@ -108,7 +108,7 @@ export function NewsPage() {
                       alt={item.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute top-4 left-4 bg-brand-green text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                    <div className="absolute top-4 left-4 bg-brand-green text-brand-navy text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
                       {item.category}
                     </div>
                   </Link>

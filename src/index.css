@@ -2,10 +2,10 @@
 
 @theme {
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --color-brand-green: #00B853;
-  --color-brand-green-hover: #009643;
-  --color-brand-navy: #0B2136;
-  --color-brand-navy-light: #15324E;
+  --color-brand-green: #6EF000;
+  --color-brand-green-hover: #5ECC00;
+  --color-brand-navy: #0A0D14;
+  --color-brand-navy-light: #141A24;
 }
 
 @layer base {

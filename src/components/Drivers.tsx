@@ -1,5 +1,5 @@
 import React from 'react';
-import drvImgSrc from '../assets/images/driver_coop63_1788912389552.jpg';
+import drvImgSrc from '../assets/images/driver_coop63_1790541467022.jpg';
 import { Link } from 'react-router-dom';
 import { Car, ShieldAlert, DollarSign, BookOpen, Users, Handshake } from 'lucide-react';
 
@@ -21,7 +21,8 @@ export function Drivers() {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] group">
               <img 
                 src={drvImgSrc} 
-                alt="Motorista no volante sorrindo" 
+                alt="Motorista cooperado no volante sorrindo" 
+                referrerPolicy="no-referrer"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/60 to-transparent" />

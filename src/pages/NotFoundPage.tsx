@@ -21,7 +21,7 @@ export function NotFoundPage() {
         <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8">
           <Link
             to="/"
-            className="inline-flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-green-hover text-white px-6 py-3 rounded-full font-bold transition-transform hover:scale-105 shadow-md"
+            className="inline-flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-green-hover text-brand-navy px-6 py-3 rounded-full font-extrabold transition-transform hover:scale-105 shadow-md"
           >
             <Home className="w-5 h-5" />
             <span>Voltar ao Início</span>

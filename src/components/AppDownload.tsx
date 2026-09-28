@@ -38,12 +38,12 @@ export function AppDownload() {
           <div className="flex-1 bg-white rounded-3xl p-8 shadow-xl border border-gray-100 flex flex-col items-center text-center relative overflow-hidden group hover:border-brand-green transition-colors">
             <div className="absolute top-0 left-0 w-full h-2 bg-brand-green" />
             <img 
-              src="/logo.png" 
-              alt="Coop63" 
-              className="w-14 h-14 object-contain mb-3 drop-shadow-sm group-hover:scale-105 transition-transform" 
+              src="/logo-square.png" 
+              alt="Coop63 App" 
+              className="w-14 h-14 object-contain mb-3 drop-shadow-sm group-hover:scale-105 transition-transform rounded-2xl" 
               referrerPolicy="no-referrer"
             />
-            <h3 className="text-2xl font-bold text-brand-navy mb-1">App Passageiro (CoopGo)</h3>
+            <h3 className="text-2xl font-bold text-brand-navy mb-1">App Passageiro</h3>
             <p className="text-gray-500 mb-5 h-10 text-sm">Para você chegar onde precisa com segurança, conforto e preço justo.</p>
             
             {/* Store Toggle */}
@@ -65,7 +65,7 @@ export function AppDownload() {
                 onClick={() => setPassengerPlatform('android')}
                 className={`flex-1 py-1.5 px-3 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1.5 ${
                   passengerPlatform === 'android'
-                    ? 'bg-brand-green text-white shadow-sm'
+                    ? 'bg-brand-green text-brand-navy font-bold shadow-sm'
                     : 'text-gray-600 hover:text-brand-navy'
                 }`}
               >
@@ -77,7 +77,7 @@ export function AppDownload() {
             <div className="bg-gray-50 p-4 rounded-2xl border border-gray-200 mb-6 group-hover:shadow-md transition-shadow relative">
               <img 
                 src={passengerQrCode} 
-                alt={passengerPlatform === 'apple' ? 'QR Code Apple App Store CoopGo' : 'QR Code Google Play Passageiro'} 
+                alt={passengerPlatform === 'apple' ? 'QR Code Apple App Store Passageiro' : 'QR Code Google Play Passageiro'} 
                 className="w-40 h-40 object-contain rounded-lg"
               />
               <div className="mt-2 text-center">
@@ -99,7 +99,7 @@ export function AppDownload() {
                     ? 'bg-brand-navy text-white shadow-md ring-2 ring-brand-navy ring-offset-2'
                     : 'bg-gray-900 text-white hover:bg-black opacity-90'
                 }`}
-                title="Abrir CoopGo na App Store"
+                title="Abrir na App Store"
               >
                 <svg viewBox="0 0 384 512" fill="currentColor" className="w-5 h-5 shrink-0"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
                 <div className="text-left">
@@ -132,9 +132,9 @@ export function AppDownload() {
           <div className="flex-1 bg-white rounded-3xl p-8 shadow-xl border border-gray-100 flex flex-col items-center text-center relative overflow-hidden group hover:border-brand-navy transition-colors">
             <div className="absolute top-0 left-0 w-full h-2 bg-brand-navy" />
             <img 
-              src="/logo.png" 
-              alt="Coop63" 
-              className="w-14 h-14 object-contain mb-3 drop-shadow-sm group-hover:scale-105 transition-transform" 
+              src="/logo-square.png" 
+              alt="Coop63 Motorista App" 
+              className="w-14 h-14 object-contain mb-3 drop-shadow-sm group-hover:scale-105 transition-transform rounded-2xl" 
               referrerPolicy="no-referrer"
             />
             <h3 className="text-2xl font-bold text-brand-navy mb-1">App Motorista</h3>

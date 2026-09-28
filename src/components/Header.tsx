@@ -37,11 +37,10 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between h-full">
-        <Link to="/" className="z-50 h-full flex items-center py-1" aria-label="Ir para a página inicial">
+        <Link to="/" className="z-50 h-full flex items-center py-2" aria-label="Ir para a página inicial">
           <Logo
             size="header"
             className="h-full flex items-center"
-            imgClassName="h-[58px] lg:h-[76px] w-[58px] lg:w-[76px] max-h-full"
           />
         </Link>
 
@@ -55,7 +54,7 @@ export function Header() {
                   end={link.href === '/'}
                   className={({ isActive }) =>
                     `relative py-2 text-sm uppercase tracking-wide transition-colors ${
-                      isActive ? 'text-brand-green font-bold' : 'text-brand-navy hover:text-brand-green font-medium'
+                      isActive ? 'text-brand-navy font-black' : 'text-brand-navy hover:text-brand-green font-medium'
                     }`
                   }
                 >
@@ -63,7 +62,7 @@ export function Header() {
                     <>
                       <span>{link.label}</span>
                       {isActive && (
-                        <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-brand-green rounded-full" />
+                        <span className="absolute -bottom-1 left-0 right-0 h-1 bg-brand-green rounded-full" />
                       )}
                     </>
                   )}
@@ -73,9 +72,9 @@ export function Header() {
           </ul>
           <Link
             to="/contato"
-            className="flex items-center gap-2 bg-brand-green hover:bg-brand-green-hover text-white px-5 py-2.5 rounded-full font-medium transition-transform hover:scale-105 shadow-sm"
+            className="flex items-center gap-2 bg-brand-green hover:bg-brand-green-hover text-brand-navy px-5 py-2.5 rounded-full font-extrabold transition-transform hover:scale-105 shadow-sm"
           >
-            <MessageCircle className="w-5 h-5" />
+            <MessageCircle className="w-5 h-5 text-brand-navy" />
             <span>Fale Conosco</span>
           </Link>
         </nav>
@@ -116,9 +115,9 @@ export function Header() {
           <Link
             to="/contato"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="flex items-center gap-2 bg-brand-green hover:bg-brand-green-hover text-white px-8 py-4 rounded-full font-bold transition-transform hover:scale-105 shadow-md text-lg"
+            className="flex items-center gap-2 bg-brand-green hover:bg-brand-green-hover text-brand-navy px-8 py-4 rounded-full font-extrabold transition-transform hover:scale-105 shadow-md text-lg"
           >
-            <MessageCircle className="w-6 h-6" />
+            <MessageCircle className="w-6 h-6 text-brand-navy" />
             <span>Fale Conosco</span>
           </Link>
         </div>

@@ -40,9 +40,9 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
                 to="/passageiros" 
-                className="flex items-center justify-center gap-3 bg-brand-green hover:bg-brand-green-hover text-white px-8 py-4 rounded-full font-bold text-lg transition-transform hover:scale-105 shadow-lg"
+                className="flex items-center justify-center gap-3 bg-brand-green hover:bg-brand-green-hover text-brand-navy px-8 py-4 rounded-full font-extrabold text-lg transition-transform hover:scale-105 shadow-lg"
               >
-                <User className="w-6 h-6" />
+                <User className="w-6 h-6 text-brand-navy" />
                 <span>Sou Passageiro</span>
               </Link>
               <Link 
@@ -56,18 +56,19 @@ export function Hero() {
           </div>
 
           <div className="hidden lg:flex flex-col items-center justify-center relative shrink-0">
-            <div className="relative group">
-              <div className="absolute -inset-6 bg-gradient-to-tr from-brand-green to-emerald-400 rounded-full blur-3xl opacity-35 group-hover:opacity-55 transition duration-500" />
-              <div className="relative w-96 h-96 xl:w-[432px] xl:h-[432px] rounded-full p-6 bg-white/10 backdrop-blur-md border border-white/20 shadow-2xl flex items-center justify-center">
+            <div className="relative group w-full max-w-[460px]">
+              <div className="absolute -inset-4 bg-gradient-to-r from-brand-green/30 via-brand-green/10 to-transparent rounded-3xl blur-2xl opacity-60 group-hover:opacity-90 transition duration-500" />
+              <div className="relative rounded-3xl p-6 bg-black/90 backdrop-blur-md border border-brand-green/30 shadow-2xl flex items-center justify-center overflow-hidden">
                 <img
-                  src="/logo.png"
+                  src="/logo-official.svg"
                   alt="Coop63 - Cooperativa de Mobilidade"
-                  className="w-full h-full object-contain drop-shadow-2xl transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-auto object-contain drop-shadow-2xl transition-transform duration-500 group-hover:scale-105"
                   referrerPolicy="no-referrer"
                 />
               </div>
             </div>
-            <div className="mt-5 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/95 text-sm font-bold tracking-wide uppercase shadow-lg">
+            <div className="mt-5 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-brand-green/30 text-white text-sm font-bold tracking-wide uppercase shadow-lg flex items-center gap-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-brand-green animate-pulse" />
               Cooperativa Oficial
             </div>
           </div>

@@ -20,9 +20,9 @@ export function CTA() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link 
             to="/contato" 
-            className="flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-green-hover text-white px-8 py-4 rounded-full font-bold text-lg transition-transform hover:-translate-y-1 shadow-lg"
+            className="flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-green-hover text-brand-navy px-8 py-4 rounded-full font-extrabold text-lg transition-transform hover:-translate-y-1 shadow-lg"
           >
-            <MessageCircle className="w-5 h-5" />
+            <MessageCircle className="w-5 h-5 text-brand-navy" />
             <span>Fale Conosco</span>
           </Link>
           <Link 

@@ -52,13 +52,13 @@ export function AboutPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col lg:flex-row items-center gap-12 max-w-5xl mx-auto">
             <div className="w-full lg:w-1/3 flex justify-center">
-              <div className="relative group">
-                <div className="absolute -inset-2 bg-gradient-to-tr from-brand-green to-brand-navy rounded-full blur-xl opacity-20 group-hover:opacity-35 transition" />
-                <div className="relative w-52 h-52 sm:w-60 sm:h-60 rounded-full p-4 bg-white border border-gray-100 shadow-xl flex items-center justify-center">
+              <div className="relative group w-full max-w-sm">
+                <div className="absolute -inset-2 bg-gradient-to-tr from-brand-green/30 to-brand-navy rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition" />
+                <div className="relative w-full rounded-3xl p-6 bg-black border border-brand-green/30 shadow-xl flex items-center justify-center">
                   <img
-                    src="/logo.png"
+                    src="/logo-official.svg"
                     alt="Logo Oficial Coop63"
-                    className="w-full h-full object-contain drop-shadow-md transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-auto object-contain drop-shadow-md transition-transform duration-500 group-hover:scale-105"
                     referrerPolicy="no-referrer"
                   />
                 </div>
@@ -84,7 +84,7 @@ export function AboutPage() {
         <div className="container mx-auto px-4 md:px-6 max-w-5xl">
           <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-emerald-100 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden group hover:shadow-md transition-shadow">
             <div className="absolute top-0 left-0 w-2 h-full bg-brand-green hidden md:block" />
-            <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-brand-green/10 text-brand-green flex items-center justify-center shrink-0 group-hover:bg-brand-green group-hover:text-white transition-colors duration-300">
+            <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-brand-green/10 text-brand-green flex items-center justify-center shrink-0 group-hover:bg-brand-green group-hover:text-brand-navy transition-colors duration-300">
               <Target className="w-10 h-10 md:w-12 md:h-12" />
             </div>
             <div className="text-center md:text-left flex-1">
@@ -103,7 +103,7 @@ export function AboutPage() {
         <div className="absolute top-0 right-0 w-96 h-96 bg-brand-green/10 rounded-full blur-3xl pointer-events-none" />
         <div className="container mx-auto px-4 md:px-6 max-w-5xl relative z-10">
           <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 backdrop-blur-sm flex flex-col md:flex-row items-center gap-8 group hover:bg-white/[0.08] transition-colors">
-            <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-white/10 text-brand-green flex items-center justify-center shrink-0 border border-white/10 group-hover:bg-brand-green group-hover:text-white transition-colors duration-300">
+            <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-white/10 text-brand-green flex items-center justify-center shrink-0 border border-white/10 group-hover:bg-brand-green group-hover:text-brand-navy transition-colors duration-300">
               <Eye className="w-10 h-10 md:w-12 md:h-12" />
             </div>
             <div className="text-center md:text-left flex-1">
@@ -132,7 +132,7 @@ export function AboutPage() {
                 key={index} 
                 className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 text-center border border-gray-100 flex flex-col items-center group hover:-translate-y-1"
               >
-                <div className="bg-brand-green/10 w-16 h-16 flex items-center justify-center rounded-2xl mb-6 text-brand-green group-hover:bg-brand-green group-hover:text-white transition-colors duration-300">
+                <div className="bg-brand-green/10 w-16 h-16 flex items-center justify-center rounded-2xl mb-6 text-brand-green group-hover:bg-brand-green group-hover:text-brand-navy transition-colors duration-300">
                   <val.icon className="w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-bold text-brand-navy mb-3">{val.title}</h3>

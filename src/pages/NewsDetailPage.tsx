@@ -26,7 +26,7 @@ export function NewsDetailPage() {
         <p className="text-gray-500 mb-8">O artigo solicitado pode ter sido arquivado ou removido.</p>
         <Link
           to="/noticias"
-          className="inline-flex items-center gap-2 bg-brand-green text-white px-6 py-3 rounded-full font-bold shadow-md hover:bg-brand-green-hover transition-colors"
+          className="inline-flex items-center gap-2 bg-brand-green text-brand-navy px-6 py-3 rounded-full font-extrabold shadow-md hover:bg-brand-green-hover transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Voltar para todas as notícias</span>
@@ -122,7 +122,7 @@ export function NewsDetailPage() {
             <div className="flex gap-3 shrink-0">
               <Link
                 to="/motoristas"
-                className="bg-brand-green hover:bg-brand-green-hover text-white px-5 py-2.5 rounded-full font-bold text-sm transition-colors shadow-md"
+                className="bg-brand-green hover:bg-brand-green-hover text-brand-navy px-5 py-2.5 rounded-full font-extrabold text-sm transition-colors shadow-md"
               >
                 Motoristas
               </Link>

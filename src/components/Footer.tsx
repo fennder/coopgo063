@@ -86,7 +86,7 @@ export function Footer() {
             </p>
             <a 
               href="#contato"
-              className="inline-flex items-center justify-center gap-2 w-full bg-brand-green hover:bg-brand-green-hover text-white px-6 py-3 rounded-xl font-bold transition-colors"
+              className="inline-flex items-center justify-center gap-2 w-full bg-brand-green hover:bg-brand-green-hover text-brand-navy px-6 py-3 rounded-xl font-extrabold transition-colors"
             >
               Atendimento WhatsApp
             </a>

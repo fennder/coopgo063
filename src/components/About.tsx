@@ -24,7 +24,7 @@ export function About() {
             </p>
             <Link 
               to="/sobre" 
-              className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green-hover text-white px-8 py-4 rounded-full font-bold transition-colors shadow-md"
+              className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green-hover text-brand-navy px-8 py-4 rounded-full font-extrabold transition-colors shadow-md"
             >
               <span>Conheça a Coop63</span>
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
