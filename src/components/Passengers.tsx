@@ -1,5 +1,5 @@
 import React from 'react';
-import passImgSrc from '../assets/images/passenger_coop63_1788912377837.jpg';
+import passImgSrc from '../assets/images/passageira_natural_1791509954174.jpg';
 import { Link } from 'react-router-dom';
 import { User, CheckCircle2, ShieldCheck, Clock, Info } from 'lucide-react';
 

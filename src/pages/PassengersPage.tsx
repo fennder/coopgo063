@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import passImgSrc from '../assets/images/passenger_coop63_1788912377837.jpg';
+import passImgSrc from '../assets/images/passageira_natural_1791509954174.jpg';
 import { ShieldCheck, Clock, MapPin, CheckCircle2, Star, Smartphone, ChevronRight } from 'lucide-react';
 import { CTA } from '../components/CTA';
 import { AppDownload } from '../components/AppDownload';
