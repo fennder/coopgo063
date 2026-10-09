@@ -5,9 +5,9 @@ export function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      name: 'João Silva',
+      name: 'Iron Milhomem',
       role: 'Motorista Cooperado',
-      content: 'Fazer parte da Coop63 mudou minha realidade. A comissão é justa, o suporte é excelente e sinto que meu trabalho é realmente valorizado.',
+      content: 'A cooperativa já era um sonho antigo. Sabíamos que, com boa gestão e união, daria certo. Hoje, realizamos isso juntos com a COOP63: temos independência, voz ativa e fugimos de plataformas que não nos respeitam. Como cooperados, somos donos do nosso negócio, participamos das decisões e dividimos os resultados. Estamos construindo algo que é verdadeiramente nosso.',
       rating: 5,
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80'
     },
