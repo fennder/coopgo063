@@ -1,5 +1,6 @@
 import React from 'react';
 import { Star, Quote } from 'lucide-react';
+import ironImg from '../assets/images/iron_milhomem_1791655360983.jpg';
 
 export function Testimonials() {
   const testimonials = [
@@ -9,7 +10,7 @@ export function Testimonials() {
       role: 'Motorista Cooperado',
       content: 'A cooperativa já era um sonho antigo. Sabíamos que, com boa gestão e união, daria certo. Hoje, realizamos isso juntos com a COOP63: temos independência, voz ativa e fugimos de plataformas que não nos respeitam. Como cooperados, somos donos do nosso negócio, participamos das decisões e dividimos os resultados. Estamos construindo algo que é verdadeiramente nosso.',
       rating: 5,
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80'
+      image: ironImg
     },
     {
       id: 2,
@@ -61,6 +62,7 @@ export function Testimonials() {
                   src={testimonial.image} 
                   alt={testimonial.name} 
                   className="w-14 h-14 rounded-full object-cover border-2 border-brand-green"
+                  referrerPolicy="no-referrer"
                 />
                 <div>
                   <h4 className="font-bold text-brand-navy">{testimonial.name}</h4>
