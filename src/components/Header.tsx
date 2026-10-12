@@ -314,22 +314,22 @@ export function Header() {
               </Link>
 
               <div className="grid grid-cols-2 gap-2 text-xs">
-                <a
-                  href="#app-passageiro"
+                <Link
+                  to="/passageiros"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="flex items-center justify-center gap-2 p-2.5 rounded-xl bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
                 >
                   <Download className="w-4 h-4 text-brand-green" />
                   <span className="font-semibold truncate">App Passageiro</span>
-                </a>
-                <a
-                  href="#app-motorista"
+                </Link>
+                <Link
+                  to="/motoristas"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="flex items-center justify-center gap-2 p-2.5 rounded-xl bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
                 >
                   <Download className="w-4 h-4 text-brand-green" />
                   <span className="font-semibold truncate">App Motorista</span>
-                </a>
+                </Link>
               </div>
             </div>
 

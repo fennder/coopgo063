@@ -23,8 +23,8 @@ export function Contact() {
               </div>
               <div>
                 <h4 className="font-bold text-brand-navy text-lg mb-1">WhatsApp</h4>
-                <p className="text-gray-600 text-sm mb-2">(00) 00000-0000</p>
-                <a href="#" className="text-brand-green font-semibold text-sm hover:underline">Chamar no WhatsApp</a>
+                <p className="text-gray-600 text-sm mb-1">(00) 00000-0000</p>
+                <span className="text-brand-green font-semibold text-sm">Canal Oficial de Atendimento</span>
               </div>
             </div>
 

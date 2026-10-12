@@ -19,21 +19,18 @@ export function Footer() {
               A Coop63 é uma cooperativa dedicada a transformar a mobilidade urbana, unindo motoristas e passageiros em um ambiente de segurança, respeito e qualidade.
             </p>
             <div className="flex gap-4">
-              <a 
-                href="https://www.instagram.com/coopgo063?stkn=MXJ0NGRocGRjZDk1bw==" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <span 
                 aria-label="Instagram da Coop63"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-green transition-colors"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white"
               >
                 <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-green transition-colors" aria-label="Facebook">
+              </span>
+              <span className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white" aria-label="Facebook">
                 <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-green transition-colors" aria-label="YouTube">
+              </span>
+              <span className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white" aria-label="YouTube">
                 <Youtube className="w-5 h-5" />
-              </a>
+              </span>
             </div>
           </div>
 
@@ -102,20 +99,15 @@ export function Footer() {
             Coop63 — Juntos por uma mobilidade melhor!
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-sm">
-            <a href="#" className="text-gray-500 hover:text-white transition-colors">Termos de Uso</a>
+            <Link to="/sobre" className="text-gray-500 hover:text-white transition-colors">Termos de Uso</Link>
             <span className="text-gray-700">•</span>
-            <a href="#" className="text-gray-500 hover:text-white transition-colors">Privacidade</a>
+            <Link to="/sobre" className="text-gray-500 hover:text-white transition-colors">Privacidade</Link>
             <span className="text-gray-700">•</span>
             <span className="text-gray-400">
               Desenvolvido por{' '}
-              <a 
-                href="https://abrindoportas.tec.br" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-brand-green hover:underline font-medium"
-              >
+              <span className="text-brand-green font-medium">
                 abrindoportas.tec.br
-              </a>
+              </span>
             </span>
           </div>
         </div>
