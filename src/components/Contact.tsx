@@ -108,8 +108,8 @@ export function Contact() {
                 <Clock className="w-6 h-6" />
               </div>
               <div>
-                <h4 className="font-bold text-brand-navy text-lg mb-1">Horário de Atendimento</h4>
-                <p className="text-gray-600 text-sm">Segunda a Sexta: 08h às 18h<br/>Sábado: 08h às 12h</p>
+                <h4 className="font-bold text-brand-navy text-lg mb-1">Horário de Funcionamento</h4>
+                <p className="text-gray-600 text-sm font-semibold text-brand-navy">Disponível 24/7 (24 horas por dia, 7 dias por semana)</p>
               </div>
             </div>
           </div>

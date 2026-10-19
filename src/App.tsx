@@ -13,6 +13,8 @@ import { AboutPage } from './pages/AboutPage';
 import { NewsPage } from './pages/NewsPage';
 import { NewsDetailPage } from './pages/NewsDetailPage';
 import { ContactPage } from './pages/ContactPage';
+import { TermsPage } from './pages/TermsPage';
+import { PrivacyPage } from './pages/PrivacyPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
 const router = createBrowserRouter([
@@ -27,6 +29,8 @@ const router = createBrowserRouter([
       { path: "noticias", element: <NewsPage /> },
       { path: "noticias/:id", element: <NewsDetailPage /> },
       { path: "contato", element: <ContactPage /> },
+      { path: "termos", element: <TermsPage /> },
+      { path: "privacidade", element: <PrivacyPage /> },
       { path: "*", element: <NotFoundPage /> },
     ]
   }
