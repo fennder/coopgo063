@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import drvImgSrc from '../assets/images/driver_coop63_1790541467022.jpg';
-import { DollarSign, ShieldAlert, BookOpen, Users, Award, HeadphonesIcon, ChevronRight } from 'lucide-react';
+import { DollarSign, ShieldAlert, BookOpen, Users, Award, HeadphonesIcon, ChevronRight, AlertCircle } from 'lucide-react';
 import { CTA } from '../components/CTA';
 import { AppDownload } from '../components/AppDownload';
 
@@ -40,6 +40,35 @@ export function DriversPage() {
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Junte-se à Coop63 e descubra as vantagens de ser um motorista cooperado. Mais lucros, mais segurança e mais respeito.
           </p>
+        </div>
+      </section>
+
+      {/* Aviso Importante: Passo a Passo para Entrar na Coop63 */}
+      <section className="py-16 md:py-20 bg-gray-50 border-b border-gray-200">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-8">
+              <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-brand-green/20 text-brand-navy text-xs font-black uppercase tracking-wider border border-brand-green/40 mb-3">
+                <AlertCircle className="w-4 h-4 text-brand-green" />
+                <span>Comunicado Oficial aos Motoristas</span>
+              </span>
+              <h2 className="text-2xl md:text-4xl font-extrabold text-brand-navy">
+                Como Entrar para a <span className="text-brand-green">Coop63</span>
+              </h2>
+              <p className="text-gray-600 text-sm md:text-base mt-2">
+                Veja o passo a passo obrigatório para se tornar um cooperado e iniciar suas corridas.
+              </p>
+            </div>
+
+            <div className="rounded-3xl overflow-hidden shadow-2xl border-2 border-brand-green/40 bg-white group hover:border-brand-green transition-all">
+              <img
+                src="/assets/aistudio/coop63entrada_676f39d7.jpeg"
+                alt="Aviso Coop63 - Passo a passo para entrar na cooperativa"
+                className="w-full h-auto object-contain block mx-auto transition-transform duration-500 group-hover:scale-[1.01]"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
