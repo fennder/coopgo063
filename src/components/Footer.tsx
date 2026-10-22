@@ -129,6 +129,14 @@ export function Footer() {
             <span className="text-gray-700">•</span>
             <Link to="/privacidade" className="text-gray-400 hover:text-brand-green font-medium transition-colors">Privacidade</Link>
             <span className="text-gray-700">•</span>
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new CustomEvent('coop63_open_cookie_modal'))}
+              className="text-gray-400 hover:text-brand-green font-medium transition-colors cursor-pointer"
+            >
+              Cookies
+            </button>
+            <span className="text-gray-700">•</span>
             <span className="text-gray-400">
               Desenvolvido por{' '}
               <span className="text-brand-green font-medium">

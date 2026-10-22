@@ -1,8 +1,21 @@
 import React, { useState } from 'react';
 import { Smartphone, CheckCircle, ShieldCheck } from 'lucide-react';
+import { getCookie, setCookie, COOKIE_PLATFORM_KEY } from '../utils/cookies';
 
 export function AppDownload() {
-  const [passengerPlatform, setPassengerPlatform] = useState<'apple' | 'android'>('android');
+  const [passengerPlatform, setPassengerPlatform] = useState<'apple' | 'android'>(() => {
+    const saved = getCookie(COOKIE_PLATFORM_KEY);
+    return saved === 'apple' || saved === 'android' ? saved : 'android';
+  });
+
+  const handlePlatformChange = (platform: 'apple' | 'android') => {
+    setPassengerPlatform(platform);
+    setCookie(COOKIE_PLATFORM_KEY, platform, {
+      maxAge: 60 * 60 * 24 * 365,
+      path: '/',
+      sameSite: 'Lax',
+    });
+  };
 
   const passengerGooglePlayUrl =
     'https://play.google.com/store/apps/details?id=br.com.coop63.passenger.drivermachine&pcampaignid=web_share';
@@ -44,7 +57,7 @@ export function AppDownload() {
             <div className="inline-flex p-1 bg-gray-100 rounded-xl mb-6 w-full max-w-[260px]">
               <button
                 type="button"
-                onClick={() => setPassengerPlatform('android')}
+                onClick={() => handlePlatformChange('android')}
                 className={`flex-1 py-1.5 px-3 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1.5 ${
                   passengerPlatform === 'android'
                     ? 'bg-brand-green text-brand-navy font-bold shadow-sm'
@@ -56,7 +69,7 @@ export function AppDownload() {
               </button>
               <button
                 type="button"
-                onClick={() => setPassengerPlatform('apple')}
+                onClick={() => handlePlatformChange('apple')}
                 className={`flex-1 py-1.5 px-3 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1.5 ${
                   passengerPlatform === 'apple'
                     ? 'bg-brand-navy text-white shadow-sm'
@@ -112,7 +125,7 @@ export function AppDownload() {
                 href={passengerGooglePlayUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => setPassengerPlatform('android')}
+                onClick={() => handlePlatformChange('android')}
                 className={`flex items-center gap-2 px-4 py-2.5 rounded-xl flex-1 justify-center transition-all ${
                   passengerPlatform === 'android'
                     ? 'bg-brand-green text-brand-navy font-bold shadow-md ring-2 ring-brand-green ring-offset-2'

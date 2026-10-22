@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Outlet, ScrollRestoration, useLocation } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
+import { CookieConsentBanner } from '../components/CookieConsentBanner';
 
 export function Layout() {
   const { pathname } = useLocation();
@@ -17,6 +18,7 @@ export function Layout() {
         <Outlet />
       </main>
       <Footer />
+      <CookieConsentBanner />
       <ScrollRestoration />
     </div>
   );

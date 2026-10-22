@@ -240,11 +240,55 @@ export function PrivacyPage() {
             {/* Section 9 */}
             <section id="privacidade-9" className="scroll-mt-28">
               <h2 className="text-xl md:text-2xl font-black text-brand-navy mb-4 border-b border-gray-100 pb-3 flex items-center gap-2">
-                <span className="text-brand-green">9.</span> Cookies e Tecnologias
+                <span className="text-brand-green">9.</span> Política de Cookies (MDN Web Docs & LGPD)
               </h2>
-              <p>
-                O site <strong>coop63.coop.br</strong> utiliza apenas cookies essenciais para o funcionamento básico, memorização de preferências e proteção contra ataques cibernéticos. O usuário pode desativar os cookies nas configurações de seu navegador web a qualquer momento.
+              <p className="mb-4">
+                O site <strong>coop63.coop.br</strong> implementa cookies em estrita conformidade com os padrões e guias de segurança do <strong>MDN Web Docs (Mozilla Developer Network)</strong> e da <strong>Lei Geral de Proteção de Dados (LGPD)</strong>.
               </p>
+              
+              <div className="overflow-x-auto mb-6">
+                <table className="w-full text-xs text-left border border-gray-200 rounded-xl overflow-hidden">
+                  <thead className="bg-brand-navy text-white uppercase text-[10px] tracking-wider">
+                    <tr>
+                      <th className="p-3">Nome do Cookie</th>
+                      <th className="p-3">Categoria</th>
+                      <th className="p-3">Finalidade</th>
+                      <th className="p-3">Duração</th>
+                      <th className="p-3">Segurança</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200 bg-white">
+                    <tr>
+                      <td className="p-3 font-mono font-bold text-brand-navy">coop63_cookie_consent</td>
+                      <td className="p-3 font-semibold text-emerald-600">Necessário</td>
+                      <td className="p-3">Armazena o registro do seu consentimento de cookies.</td>
+                      <td className="p-3">1 ano</td>
+                      <td className="p-3 font-mono text-[10px]">SameSite=Lax; Path=/</td>
+                    </tr>
+                    <tr>
+                      <td className="p-3 font-mono font-bold text-brand-navy">coop63_app_platform</td>
+                      <td className="p-3 font-semibold text-blue-600">Preferências</td>
+                      <td className="p-3">Memoriza a plataforma mobile preferida (Android ou iOS) nos cards de download.</td>
+                      <td className="p-3">1 ano</td>
+                      <td className="p-3 font-mono text-[10px]">SameSite=Lax; Path=/</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div>
+                  <h4 className="font-bold text-brand-navy text-sm mb-1">Deseja alterar suas preferências de cookies?</h4>
+                  <p className="text-xs text-gray-600">Você pode revisar ou revogar seu consentimento a qualquer momento.</p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => window.dispatchEvent(new CustomEvent('coop63_open_cookie_modal'))}
+                  className="px-4 py-2.5 rounded-xl bg-brand-navy hover:bg-brand-navy-light text-white font-bold text-xs transition-colors shrink-0 shadow-sm"
+                >
+                  Gerenciar Cookies
+                </button>
+              </div>
             </section>
 
             {/* Section 10 */}
