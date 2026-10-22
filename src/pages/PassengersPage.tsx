@@ -40,6 +40,17 @@ export function PassengersPage() {
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             A Coop63 oferece a melhor experiência em mobilidade urbana para você chegar onde precisa com conforto, segurança e preço justo.
           </p>
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://play.google.com/store/apps/details?id=br.com.coop63.passenger.drivermachine&pcampaignid=web_share"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-brand-green hover:bg-brand-green-hover text-brand-navy px-8 py-4 rounded-full font-black text-base shadow-xl transition-transform hover:scale-105 active:scale-95"
+            >
+              <svg viewBox="0 0 512 512" fill="currentColor" className="w-5 h-5 fill-current"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
+              <span>Baixar App Passageiro no Google Play</span>
+            </a>
+          </div>
         </div>
       </section>
 

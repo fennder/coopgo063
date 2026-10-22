@@ -314,22 +314,26 @@ export function Header() {
               </Link>
 
               <div className="grid grid-cols-2 gap-2 text-xs">
-                <Link
-                  to="/passageiros"
+                <a
+                  href="https://play.google.com/store/apps/details?id=br.com.coop63.passenger.drivermachine&pcampaignid=web_share"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="flex items-center justify-center gap-2 p-2.5 rounded-xl bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
                 >
                   <Download className="w-4 h-4 text-brand-green" />
                   <span className="font-semibold truncate">App Passageiro</span>
-                </Link>
-                <Link
-                  to="/motoristas"
+                </a>
+                <a
+                  href="https://play.google.com/store/apps/details?id=br.com.coop63.taxi.drivermachine&pcampaignid=web_share"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="flex items-center justify-center gap-2 p-2.5 rounded-xl bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
                 >
                   <Download className="w-4 h-4 text-brand-green" />
                   <span className="font-semibold truncate">App Motorista</span>
-                </Link>
+                </a>
               </div>
             </div>
 
