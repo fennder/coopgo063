@@ -20,6 +20,9 @@ export function AppDownload() {
   const passengerGooglePlayUrl =
     'https://play.google.com/store/apps/details?id=br.com.coop63.passenger.drivermachine&pcampaignid=web_share';
 
+  const passengerAppleAppStoreUrl =
+    'https://apps.apple.com/br/app/coop63/id6827288680';
+
   const driverGooglePlayUrl =
     'https://play.google.com/store/apps/details?id=br.com.coop63.taxi.drivermachine&pcampaignid=web_share';
 
@@ -107,14 +110,25 @@ export function AppDownload() {
                 </>
               ) : (
                 <>
-                  <div className="w-16 h-16 rounded-2xl bg-brand-navy/10 border border-brand-navy/20 flex items-center justify-center mb-3 text-brand-navy">
-                    <Smartphone className="w-8 h-8 text-brand-navy" />
+                  <div className="p-2.5 bg-white rounded-xl border border-gray-200 shadow-sm mb-3">
+                    <img 
+                      src={`https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(passengerAppleAppStoreUrl)}`}
+                      alt="QR Code Apple Store App Passageiro Coop63"
+                      className="w-28 h-28 object-contain"
+                    />
                   </div>
-                  <span className="text-sm font-bold text-brand-navy">Versão para iPhone (iOS)</span>
-                  <span className="text-xs text-gray-500 mt-1 flex items-center gap-1">
-                    <ShieldCheck className="w-3.5 h-3.5 text-brand-green" />
-                    Em processo de homologação na App Store
+                  <span className="text-xs text-gray-500 font-semibold mb-3">
+                    Aponte a câmera do seu iPhone (iOS)
                   </span>
+                  <a
+                    href={passengerAppleAppStoreUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-navy hover:bg-black text-white font-black text-xs transition-transform active:scale-95 shadow-md"
+                  >
+                    <svg viewBox="0 0 384 512" fill="currentColor" className="w-4 h-4 fill-current"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+                    <span>Baixar na App Store</span>
+                  </a>
                 </>
               )}
             </div>
@@ -139,19 +153,24 @@ export function AppDownload() {
                   <span className="block text-sm font-bold leading-none mt-0.5">Google Play</span>
                 </div>
               </a>
-              <div
+              <a
+                href={passengerAppleAppStoreUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => handlePlatformChange('apple')}
                 className={`flex items-center gap-2 px-4 py-2.5 rounded-xl flex-1 justify-center transition-all ${
                   passengerPlatform === 'apple'
-                    ? 'bg-brand-navy text-white shadow-md'
-                    : 'bg-gray-100 text-gray-500'
+                    ? 'bg-brand-navy text-white shadow-md ring-2 ring-brand-navy ring-offset-2'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
+                title="Abrir na App Store"
               >
                 <svg viewBox="0 0 384 512" fill="currentColor" className="w-5 h-5 shrink-0"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
                 <div className="text-left">
-                  <span className="block text-[10px] leading-none text-gray-400">Em breve na</span>
+                  <span className="block text-[10px] leading-none text-gray-400">Disponível na</span>
                   <span className="block text-sm font-semibold leading-none mt-0.5">App Store</span>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
 
