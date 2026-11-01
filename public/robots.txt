@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap oficial da Coop63
+Sitemap: https://coop63.coop.br/sitemap.xml
