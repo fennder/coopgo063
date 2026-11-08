@@ -301,7 +301,7 @@ export function PrivacyPage() {
               </p>
               <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200 space-y-2 text-xs">
                 <p><strong>Encarregado de Proteção de Dados (DPO):</strong> Gestão de Privacidade Coop63</p>
-                <p><strong>E-mail:</strong> <span className="text-brand-navy font-bold">contato@coop63.com.br</span></p>
+                <p><strong>E-mail:</strong> <a href="mailto:administracao@coop63.coop.br" className="text-brand-navy hover:text-brand-green transition-colors font-bold">administracao@coop63.coop.br</a></p>
                 <p><strong>WhatsApp Oficial:</strong> <span className="text-brand-green font-extrabold">(63) 98498-4085</span></p>
                 <p><strong>Sede:</strong> Palmas - TO, Brasil</p>
               </div>

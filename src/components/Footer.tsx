@@ -29,12 +29,15 @@ export function Footer() {
               A Coop63 é uma cooperativa dedicada a transformar a mobilidade urbana, unindo motoristas e passageiros em um ambiente de segurança, respeito e qualidade.
             </p>
             <div className="flex gap-4">
-              <span 
-                aria-label="Instagram da Coop63"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white"
+              <a 
+                href="https://www.instagram.com/coop63.oficial"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram da Coop63 (@coop63.oficial)"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-brand-green hover:text-brand-navy flex items-center justify-center text-white transition-all transform hover:scale-105"
               >
                 <Instagram className="w-5 h-5" />
-              </span>
+              </a>
               <span className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white" aria-label="Facebook">
                 <Facebook className="w-5 h-5" />
               </span>
@@ -73,11 +76,13 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-brand-green shrink-0" />
-                <span className="text-gray-400">contato@coop63.com.br</span>
+                <a href="mailto:administracao@coop63.coop.br" className="text-gray-400 hover:text-brand-green transition-colors">
+                  administracao@coop63.coop.br
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-brand-green shrink-0 mt-0.5" />
-                <span className="text-gray-400">Endereço Oficial da Sede,<br/>Cidade - UF</span>
+                <span className="text-gray-400">Palmas - Tocantins</span>
               </li>
             </ul>
           </div>

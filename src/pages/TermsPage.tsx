@@ -257,7 +257,7 @@ export function TermsPage() {
               <div>
                 <strong>Dúvidas sobre os Termos de Uso?</strong>
                 <p className="mt-0.5 text-gray-600">
-                  Nossa diretoria e equipe jurídica estão à disposição através do canal oficial de atendimento pelo WhatsApp <strong>(63) 98498-4085</strong> ou pelo e-mail <strong>contato@coop63.com.br</strong>.
+                  Nossa diretoria e equipe jurídica estão à disposição através do canal oficial de atendimento pelo WhatsApp <strong>(63) 98498-4085</strong> ou pelo e-mail <strong>administracao@coop63.coop.br</strong>.
                 </p>
               </div>
             </div>

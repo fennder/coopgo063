@@ -24,6 +24,7 @@ export function Contact() {
       duvida: 'Dúvida Geral',
       motorista: 'Quero ser Motorista',
       passageiro: 'Sou Passageiro',
+      sugestao: 'Sugestões',
       reclamacao: 'Reclamação',
     };
 
@@ -89,7 +90,11 @@ export function Contact() {
               </div>
               <div>
                 <h4 className="font-bold text-brand-navy text-lg mb-1">E-mail</h4>
-                <p className="text-gray-600 text-sm">contato@coop63.com.br</p>
+                <p className="text-gray-600 text-sm">
+                  <a href="mailto:administracao@coop63.coop.br" className="hover:text-brand-green transition-colors font-medium">
+                    administracao@coop63.coop.br
+                  </a>
+                </p>
               </div>
             </div>
 
@@ -99,7 +104,7 @@ export function Contact() {
               </div>
               <div>
                 <h4 className="font-bold text-brand-navy text-lg mb-1">Endereço</h4>
-                <p className="text-gray-600 text-sm">Endereço Oficial da Sede,<br/>Cidade - UF</p>
+                <p className="text-gray-600 text-sm">Palmas - Tocantins</p>
               </div>
             </div>
 
@@ -179,6 +184,7 @@ export function Contact() {
                       <option value="duvida">Dúvida Geral</option>
                       <option value="motorista">Quero ser Motorista</option>
                       <option value="passageiro">Sou Passageiro</option>
+                      <option value="sugestao">Sugestões</option>
                       <option value="reclamacao">Reclamação</option>
                     </select>
                   </div>

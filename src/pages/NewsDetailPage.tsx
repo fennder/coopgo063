@@ -95,11 +95,16 @@ export function NewsDetailPage() {
           </div>
 
           {/* Featured Image */}
-          <div className="relative rounded-3xl overflow-hidden shadow-xl aspect-video mb-10 bg-gray-100">
+          <div className="relative rounded-3xl overflow-hidden shadow-xl mb-10 bg-brand-navy/95 flex items-center justify-center min-h-[320px] sm:min-h-[440px] max-h-[600px]">
+            <div
+              className="absolute inset-0 bg-cover bg-center filter blur-2xl opacity-40 scale-110 pointer-events-none"
+              style={{ backgroundImage: `url(${article.image})` }}
+              aria-hidden="true"
+            />
             <img
               src={article.image}
               alt={article.title}
-              className="w-full h-full object-cover"
+              className="relative z-10 w-auto h-full max-h-[580px] max-w-full object-contain mx-auto py-2 sm:py-3 shadow-2xl rounded-2xl"
             />
           </div>
 
@@ -108,9 +113,72 @@ export function NewsDetailPage() {
             <p className="font-semibold text-xl text-gray-900 leading-snug">
               {article.summary}
             </p>
-            {article.content.map((paragraph, idx) => (
-              <p key={idx}>{paragraph}</p>
-            ))}
+            {article.content.map((paragraph, idx) => {
+              if (paragraph.startsWith('IMAGE:')) {
+                const parts = paragraph.replace('IMAGE:', '').split('|');
+                const src = parts[0]?.trim();
+                const caption = parts[1]?.trim() || '';
+                return (
+                  <figure
+                    key={idx}
+                    className="not-prose my-8 rounded-3xl overflow-hidden shadow-xl border border-gray-200 bg-brand-navy/95"
+                  >
+                    <div className="flex items-center justify-center p-3 sm:p-5">
+                      <img
+                        src={src}
+                        alt={caption || 'Imagem da matéria'}
+                        className="w-auto h-auto max-h-[540px] max-w-full object-contain mx-auto rounded-2xl shadow-lg"
+                      />
+                    </div>
+                    {caption && (
+                      <figcaption className="p-3.5 text-center text-xs sm:text-sm text-gray-200 bg-brand-navy border-t border-white/10 font-medium leading-relaxed">
+                        {caption}
+                      </figcaption>
+                    )}
+                  </figure>
+                );
+              }
+              if (paragraph.includes('📅 Data:')) {
+                return (
+                  <div
+                    key={idx}
+                    className="not-prose mt-8 p-6 sm:p-7 rounded-2xl bg-gradient-to-br from-brand-navy/5 to-brand-green/10 border border-brand-green/30 shadow-sm text-gray-800"
+                  >
+                    <h4 className="font-extrabold text-lg sm:text-xl text-brand-navy mb-4 flex items-center gap-2">
+                      <span>Informações do Evento</span>
+                    </h4>
+                    <div className="space-y-2.5 text-base sm:text-lg">
+                      <div className="flex items-center gap-2 font-medium text-gray-800">
+                        <span className="text-xl">📅</span>
+                        <span><strong>Data:</strong> 7 de novembro (sábado)</span>
+                      </div>
+                      <div className="flex items-center gap-2 font-medium text-gray-800">
+                        <span className="text-xl">⏰</span>
+                        <span><strong>Horário:</strong> das 9h às 12h</span>
+                      </div>
+                      <div className="flex flex-wrap items-center gap-2 font-medium text-gray-800">
+                        <span className="text-xl">📍</span>
+                        <span><strong>Local:</strong> Auditório da DPE-TO</span>
+                        <a
+                          href="https://maps.app.goo.gl/DwZer5jK22cY6DWD7"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-brand-navy bg-brand-green hover:bg-brand-green-hover text-xs font-bold px-3.5 py-1.5 rounded-full transition-colors ml-1 shadow-sm"
+                        >
+                          <span>Abrir no Google Maps</span>
+                          <span className="text-xs">↗</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+              return (
+                <p key={idx} className="whitespace-pre-line">
+                  {paragraph}
+                </p>
+              );
+            })}
           </div>
 
           {/* Action Box */}
