@@ -144,9 +144,14 @@ export function Footer() {
             <span className="text-gray-700">•</span>
             <span className="text-gray-400">
               Desenvolvido por{' '}
-              <span className="text-brand-green font-medium">
+              <a
+                href="https://abrindoportas.tec.br"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-brand-green hover:underline font-medium hover:text-brand-green-hover transition-colors"
+              >
                 abrindoportas.tec.br
-              </span>
+              </a>
             </span>
           </div>
         </div>
