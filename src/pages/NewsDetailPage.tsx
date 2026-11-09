@@ -138,6 +138,29 @@ export function NewsDetailPage() {
                   </figure>
                 );
               }
+              if (paragraph.includes('NA COOP63 NÃO HÁ PASSE:')) {
+                return (
+                  <div
+                    key={idx}
+                    className="not-prose my-8 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-brand-navy via-brand-navy to-slate-900 border-2 border-brand-green/50 shadow-2xl text-white relative overflow-hidden"
+                  >
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-brand-green/10 rounded-full blur-2xl pointer-events-none" />
+                    <div className="inline-flex items-center gap-2 bg-brand-green/20 text-brand-green px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider mb-4 border border-brand-green/30">
+                      <span className="w-2 h-2 rounded-full bg-brand-green animate-pulse"></span>
+                      <span>Premissa da Cooperativa</span>
+                    </div>
+                    <h4 className="text-xl sm:text-2xl font-black text-white leading-tight mb-4">
+                      NA COOP63 NÃO HÁ PASSE: <span className="text-brand-green">você só paga quando roda (15% por corrida).</span>
+                    </h4>
+                    <div className="p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10 text-sm sm:text-base text-gray-200 leading-relaxed font-medium">
+                      <p className="mb-2 text-brand-green font-bold text-xs uppercase tracking-wider">A conta que liberta o motorista:</p>
+                      <p className="text-gray-100">
+                        <strong>600 motoristas</strong> × <strong>2 passes</strong> × <strong>R$ 46</strong> = <span className="text-brand-green font-black">R$ 55.200</span> por dia, <span className="text-brand-green font-black">R$ 1.656.000</span> por mês e mais de <span className="text-brand-green font-black text-base sm:text-lg">R$ 20.180.000</span> por ano ficando em Palmas!
+                      </p>
+                    </div>
+                  </div>
+                );
+              }
               if (paragraph.includes('📅 Data:')) {
                 return (
                   <div
