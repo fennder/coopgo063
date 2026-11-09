@@ -155,7 +155,7 @@ export function NewsDetailPage() {
                     <div className="p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10 text-sm sm:text-base text-gray-200 leading-relaxed font-medium">
                       <p className="mb-2 text-brand-green font-bold text-xs uppercase tracking-wider">A conta que liberta o motorista:</p>
                       <p className="text-gray-100">
-                        <strong>600 motoristas</strong> × <strong>2 passes</strong> × <strong>R$ 46</strong> = <span className="text-brand-green font-black">R$ 55.200</span> por dia, <span className="text-brand-green font-black">R$ 1.656.000</span> por mês e mais de <span className="text-brand-green font-black text-base sm:text-lg">R$ 20.180.000</span> por ano ficando em Palmas!
+                        <strong>600 motoristas</strong> × <strong>2 passes</strong> × <strong>R$ 46</strong> = <span className="text-brand-green font-black">R$ 55.200</span> por dia, <span className="text-brand-green font-black">R$ 1.656.000</span> por mês e cerca de <span className="text-brand-green font-black text-base sm:text-lg">R$ 20.180.000</span> por ano ficando em Palmas!
                       </p>
                     </div>
                   </div>
