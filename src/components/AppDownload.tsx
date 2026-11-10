@@ -18,7 +18,8 @@ export function AppDownload() {
   };
 
   const passengerGooglePlayUrl =
-    'https://play.google.com/store/apps/details?id=br.com.coop63.passenger.drivermachine&pcampaignid=web_share';
+    //'https://play.google.com/store/apps/details?id=br.com.coop63.passenger.drivermachine&pcampaignid=web_share';
+    'https://play.google.com/store/apps/details?id=br.com.coop63.passenger.drivermachine&referrer=indicacao%3DDR71AP';
 
   const passengerAppleAppStoreUrl =
     'https://apps.apple.com/br/app/coop63/id6827288680';
