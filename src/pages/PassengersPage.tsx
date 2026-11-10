@@ -43,7 +43,7 @@ export function PassengersPage() {
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               //href="https://play.google.com/store/apps/details?id=br.com.coop63.passenger.drivermachine&pcampaignid=web_share"
-              href="https://play.google.com/store/apps/details?id=br.com.coop63.passenger.drivermachine&referrer=indicacao%3DDR71AP"
+              href="https://play.google.com/store/apps/details?id=br.com.coop63.passenger.drivermachine&referrer=indicacao%33HDZGL"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-brand-green hover:bg-brand-green-hover text-brand-navy px-8 py-4 rounded-full font-black text-base shadow-xl transition-transform hover:scale-105 active:scale-95"
