@@ -121,13 +121,13 @@ export function NewsDetailPage() {
                 return (
                   <figure
                     key={idx}
-                    className="not-prose my-8 rounded-3xl overflow-hidden shadow-xl border border-gray-200 bg-brand-navy/95"
+                    className="not-prose my-8 rounded-3xl overflow-hidden shadow-xl border border-gray-200 bg-brand-navy/95 max-w-sm sm:max-w-md mx-auto"
                   >
                     <div className="flex items-center justify-center p-3 sm:p-5">
                       <img
                         src={src}
                         alt={caption || 'Imagem da matéria'}
-                        className="w-auto h-auto max-h-[540px] max-w-full object-contain mx-auto rounded-2xl shadow-lg"
+                        className="w-auto h-auto max-h-[480px] max-w-full object-contain mx-auto rounded-2xl shadow-lg"
                       />
                     </div>
                     {caption && (
@@ -136,6 +136,78 @@ export function NewsDetailPage() {
                       </figcaption>
                     )}
                   </figure>
+                );
+              }
+              if (paragraph.startsWith('### Posição da COOP63:')) {
+                const headingText = paragraph.replace('### ', '');
+                return (
+                  <div
+                    key={idx}
+                    className="not-prose mt-12 mb-6 p-6 sm:p-7 rounded-2xl bg-gradient-to-r from-brand-navy via-brand-navy to-slate-900 border-l-4 border-brand-green text-white shadow-xl"
+                  >
+                    <span className="text-xs font-black tracking-widest text-brand-green uppercase block mb-1">
+                      Modelo Cooperativo
+                    </span>
+                    <h3 className="text-xl sm:text-2xl font-black text-white leading-snug">
+                      {headingText}
+                    </h3>
+                  </div>
+                );
+              }
+              if (paragraph.startsWith('### ')) {
+                const headingText = paragraph.replace('### ', '');
+                return (
+                  <h3 key={idx} className="not-prose text-2xl font-black text-brand-navy mt-10 mb-3 pb-2 border-b border-gray-100 flex items-center gap-2.5">
+                    <span className="w-2.5 h-6 bg-brand-green rounded-full shrink-0"></span>
+                    <span>{headingText}</span>
+                  </h3>
+                );
+              }
+              if (paragraph.startsWith('Contexto:')) {
+                return (
+                  <div
+                    key={idx}
+                    className="not-prose my-6 p-5 rounded-2xl bg-amber-500/10 border-l-4 border-amber-500 text-sm sm:text-base text-gray-800"
+                  >
+                    <p className="font-medium leading-relaxed">
+                      <strong className="text-amber-900 font-bold uppercase tracking-wider text-xs block mb-1">
+                        Contexto Informativo
+                      </strong>
+                      {paragraph.replace('Contexto:', '').trim()}
+                    </p>
+                  </div>
+                );
+              }
+              if (paragraph.startsWith('FONTES DA MATÉRIA:')) {
+                const textWithoutPrefix = paragraph.replace('FONTES DA MATÉRIA:', '').trim();
+                return (
+                  <div
+                    key={idx}
+                    className="not-prose mt-12 p-6 sm:p-7 rounded-2xl bg-gray-50 border border-gray-200 text-xs sm:text-sm text-gray-600 shadow-sm"
+                  >
+                    <div className="flex items-center gap-2 font-black text-brand-navy uppercase tracking-wider text-xs mb-3">
+                      <span className="w-2 h-2 rounded-full bg-brand-green"></span>
+                      <span>Fontes e Fundamentos Oficiais da Matéria</span>
+                    </div>
+                    <div className="leading-relaxed whitespace-pre-line text-gray-700">
+                      {textWithoutPrefix}
+                    </div>
+                  </div>
+                );
+              }
+              if (paragraph.startsWith('A IMPORTÂNCIA DE ESTAR NA COOP63:')) {
+                return (
+                  <div
+                    key={idx}
+                    className="not-prose my-8 p-6 sm:p-7 rounded-2xl bg-gradient-to-r from-brand-navy via-brand-navy to-slate-900 border-l-4 border-brand-green text-white shadow-xl"
+                  >
+                    <span className="text-xs font-black tracking-widest text-brand-green uppercase block mb-1">
+                      Diferencial Cooperativista
+                    </span>
+                    <h3 className="text-xl sm:text-2xl font-black text-white leading-snug">
+                      {paragraph}
+                    </h3>
+                  </div>
                 );
               }
               if (paragraph.includes('NA COOP63 NÃO HÁ PASSE:')) {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import drvImgSrc from '../assets/images/driver_coop63_1790541467022.jpg';
+import drvImgSrc from '../assets/images/motorista_camisa_coop63_1794501549713.jpg';
 import { DollarSign, ShieldAlert, BookOpen, Users, Award, HeadphonesIcon, ChevronRight, AlertCircle } from 'lucide-react';
 import { CTA } from '../components/CTA';
 import { AppDownload } from '../components/AppDownload';

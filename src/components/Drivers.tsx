@@ -1,5 +1,5 @@
 import React from 'react';
-import drvImgSrc from '../assets/images/driver_coop63_1790541467022.jpg';
+import drvImgSrc from '../assets/images/motorista_camisa_coop63_1794501549713.jpg';
 import { Link } from 'react-router-dom';
 import { Car, ShieldAlert, DollarSign, BookOpen, Users, Handshake } from 'lucide-react';
 
