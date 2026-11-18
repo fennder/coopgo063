@@ -3,13 +3,16 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { newsArticles } from '../data/newsData';
 import { ArrowLeft, Calendar, Clock, Share2, Tag, ChevronRight, Check } from 'lucide-react';
 import { CTA } from '../components/CTA';
+import { SeoHead } from '../components/SeoHead';
 
 export function NewsDetailPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const [copied, setCopied] = React.useState(false);
 
-  const article = newsArticles.find((item) => item.id === Number(id));
+  const article = newsArticles.find(
+    (item) => item.slug === id || item.id === Number(id)
+  );
 
   const handleShare = () => {
     if (navigator.clipboard) {
@@ -22,6 +25,12 @@ export function NewsDetailPage() {
   if (!article) {
     return (
       <div className="py-24 text-center container mx-auto px-4">
+        <SeoHead
+          title="Notícia não encontrada | Coop63"
+          description="O artigo solicitado não está mais disponível ou foi arquivado no portal oficial da Coop63."
+          path={`/noticias/${id || ''}`}
+          noindex
+        />
         <h2 className="text-3xl font-extrabold text-brand-navy mb-4">Notícia não encontrada</h2>
         <p className="text-gray-500 mb-8">O artigo solicitado pode ter sido arquivado ou removido.</p>
         <Link
@@ -36,9 +45,62 @@ export function NewsDetailPage() {
   }
 
   const related = newsArticles.filter((item) => item.id !== article.id).slice(0, 3);
+  const articlePath = `/noticias/${article.slug}`;
+  const articleAbsoluteUrl = `https://coop63.coop.br${articlePath}`;
+  const articleImageUrl = /^https?:\/\//i.test(article.image)
+    ? article.image
+    : `https://coop63.coop.br${article.image.startsWith('/') ? article.image : `/${article.image}`}`;
+
+  const articleJsonLd = [
+    {
+      '@type': 'NewsArticle',
+      headline: article.title,
+      description: article.summary,
+      image: [articleImageUrl],
+      datePublished: article.isoDate,
+      dateModified: article.isoDate,
+      articleSection: article.category,
+      inLanguage: 'pt-BR',
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': articleAbsoluteUrl,
+      },
+      author: {
+        '@type': 'Organization',
+        name: 'Comunicação Coop63',
+        url: 'https://coop63.coop.br',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Coop63 Mobilidade Cooperativa',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://coop63.coop.br/assets/aistudio/unnamed_88fe9c17.webp',
+        },
+      },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://coop63.coop.br/' },
+        { '@type': 'ListItem', position: 2, name: 'Notícias', item: 'https://coop63.coop.br/noticias' },
+        { '@type': 'ListItem', position: 3, name: article.title, item: articleAbsoluteUrl },
+      ],
+    },
+  ];
 
   return (
     <div>
+      <SeoHead
+        title={`${article.title} | Coop63`}
+        description={article.summary.slice(0, 160)}
+        path={articlePath}
+        image={article.image}
+        type="article"
+        publishedTime={article.isoDate}
+        articleCategory={article.category}
+        jsonLd={articleJsonLd}
+      />
       {/* Breadcrumb Header */}
       <div className="bg-gray-100 border-b border-gray-200 py-4">
         <div className="container mx-auto px-4 md:px-6">
@@ -104,6 +166,8 @@ export function NewsDetailPage() {
             <img
               src={article.image}
               alt={article.title}
+              fetchPriority="high"
+              loading="eager"
               className="relative z-10 w-auto h-full max-h-[580px] max-w-full object-contain mx-auto py-2 sm:py-3 shadow-2xl rounded-2xl"
             />
           </div>
@@ -127,6 +191,8 @@ export function NewsDetailPage() {
                       <img
                         src={src}
                         alt={caption || 'Imagem da matéria'}
+                        loading="lazy"
+                        decoding="async"
                         className="w-auto h-auto max-h-[480px] max-w-full object-contain mx-auto rounded-2xl shadow-lg"
                       />
                     </div>
@@ -175,6 +241,80 @@ export function NewsDetailPage() {
                       </strong>
                       {paragraph.replace('Contexto:', '').trim()}
                     </p>
+                  </div>
+                );
+              }
+              if (paragraph.startsWith('NOTA:')) {
+                return (
+                  <div
+                    key={idx}
+                    className="not-prose my-6 p-5 rounded-2xl bg-slate-100 border-l-4 border-brand-navy text-sm sm:text-base text-gray-700"
+                  >
+                    <p className="leading-relaxed italic">
+                      <strong className="not-italic text-brand-navy font-extrabold uppercase tracking-wider text-xs block mb-1">
+                        Nota de Esclarecimento
+                      </strong>
+                      {paragraph.replace('NOTA:', '').trim()}
+                    </p>
+                  </div>
+                );
+              }
+              if (paragraph.startsWith('CLIPPING:')) {
+                const rows = paragraph
+                  .replace('CLIPPING:', '')
+                  .trim()
+                  .split('\n')
+                  .map((line) => line.split('|').map((s) => s.trim()))
+                  .filter((parts) => parts.length === 3);
+
+                return (
+                  <div key={idx} className="not-prose my-8 overflow-hidden rounded-2xl border border-gray-200 shadow-sm bg-white">
+                    <div className="bg-brand-navy px-5 py-3.5 flex items-center justify-between">
+                      <span className="text-xs font-black tracking-widest text-brand-green uppercase">
+                        Clipping de Imprensa • 17/11/2026
+                      </span>
+                    </div>
+                    <div className="divide-y divide-gray-100">
+                      {rows.map(([outlet, headline, highlight], rIdx) => (
+                        <div key={rIdx} className="p-5 hover:bg-gray-50/80 transition-colors">
+                          <div className="flex flex-col sm:flex-row sm:items-baseline gap-1.5 sm:gap-3 mb-1.5">
+                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-black bg-brand-green/20 text-brand-navy shrink-0 w-fit">
+                              {outlet}
+                            </span>
+                            <h4 className="font-bold text-brand-navy text-base italic leading-snug">
+                              “{headline}”
+                            </h4>
+                          </div>
+                          <p className="text-sm text-gray-600 leading-relaxed sm:pl-1">
+                            {highlight}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              }
+              if (paragraph.startsWith('TIMELINE:')) {
+                const events = paragraph
+                  .replace('TIMELINE:', '')
+                  .trim()
+                  .split('\n')
+                  .map((line) => line.split('|').map((s) => s.trim()))
+                  .filter((parts) => parts.length === 2);
+
+                return (
+                  <div key={idx} className="not-prose my-8 pl-4 sm:pl-6 border-l-2 border-brand-green/40 space-y-6">
+                    {events.map(([milestone, desc], eIdx) => (
+                      <div key={eIdx} className="relative pl-4 sm:pl-5">
+                        <span className="absolute -left-[23px] sm:-left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-brand-green border-2 border-white shadow-sm ring-2 ring-brand-green/30" />
+                        <span className="text-xs font-black uppercase tracking-wider text-brand-navy bg-brand-green/15 px-2.5 py-1 rounded-md inline-block mb-1.5">
+                          {milestone}
+                        </span>
+                        <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+                          {desc}
+                        </p>
+                      </div>
+                    ))}
                   </div>
                 );
               }
@@ -309,13 +449,15 @@ export function NewsDetailPage() {
               {related.map((item) => (
                 <Link
                   key={item.id}
-                  to={`/noticias/${item.id}`}
+                  to={`/noticias/${item.slug}`}
                   className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100 flex flex-col group"
                 >
                   <div className="h-40 overflow-hidden relative">
                     <img
                       src={item.image}
                       alt={item.title}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <span className="absolute top-3 left-3 bg-brand-navy/90 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full uppercase">

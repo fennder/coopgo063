@@ -2,50 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://coop63.coop.br/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://coop63.coop.br/passageiros</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://coop63.coop.br/motoristas</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://coop63.coop.br/noticias</loc>
-    <lastmod>2026-10-31</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://coop63.coop.br/sobre</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://coop63.coop.br/contato</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://coop63.coop.br/termos</loc>
-    <lastmod>2026-10-31</lastmod>
+    <loc>https://coop63.coop.br/noticias/stj-suspende-liminar-trabalhista-passe-motoristas-uber</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://coop63.coop.br/privacidade</loc>
-    <lastmod>2026-10-31</lastmod>
+    <loc>https://coop63.coop.br/noticias/diretrizes-corridas-supermercado-aplicativo-coop63</loc>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coop63.coop.br/noticias/justica-trabalho-suspende-passe-motoristas-uber</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coop63.coop.br/noticias/coop63-experience-quanto-passes-custam-motorista-dono</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coop63.coop.br/noticias/coop63-experience-inovacao-forca-cooperativista</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coop63.coop.br/noticias/campanha-motorista-valorizado-reconhecido</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coop63.coop.br/noticias/dicas-seguranca-praticidade-viagens-diarias</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coop63.coop.br/noticias/atualizacao-aplicativo-coop63-versao-2-4</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

@@ -51,6 +51,10 @@ export function AppDownload() {
             <img 
               src="/assets/aistudio/unnamed_88fe9c17.webp" 
               alt="Coop63 App Passageiro" 
+              width={64}
+              height={64}
+              loading="lazy"
+              decoding="async"
               className="w-16 h-16 object-contain mb-3 drop-shadow-md group-hover:scale-105 transition-transform rounded-2xl bg-black" 
               referrerPolicy="no-referrer"
             />
@@ -93,6 +97,10 @@ export function AppDownload() {
                     <img 
                       src={`https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(passengerGooglePlayUrl)}`}
                       alt="QR Code Google Play App Passageiro Coop63"
+                      width={112}
+                      height={112}
+                      loading="lazy"
+                      decoding="async"
                       className="w-28 h-28 object-contain"
                     />
                   </div>
@@ -115,6 +123,10 @@ export function AppDownload() {
                     <img 
                       src={`https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(passengerAppleAppStoreUrl)}`}
                       alt="QR Code Apple Store App Passageiro Coop63"
+                      width={112}
+                      height={112}
+                      loading="lazy"
+                      decoding="async"
                       className="w-28 h-28 object-contain"
                     />
                   </div>
@@ -181,6 +193,10 @@ export function AppDownload() {
             <img 
               src="/assets/aistudio/unnamed_88fe9c17.webp" 
               alt="Coop63 App Motorista" 
+              width={64}
+              height={64}
+              loading="lazy"
+              decoding="async"
               className="w-16 h-16 object-contain mb-3 drop-shadow-md group-hover:scale-105 transition-transform rounded-2xl bg-black" 
               referrerPolicy="no-referrer"
             />
@@ -193,6 +209,10 @@ export function AppDownload() {
                 <img 
                   src={`https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(driverGooglePlayUrl)}`}
                   alt="QR Code Google Play App Motorista Coop63"
+                  width={112}
+                  height={112}
+                  loading="lazy"
+                  decoding="async"
                   className="w-28 h-28 object-contain"
                 />
               </div>

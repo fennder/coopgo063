@@ -1,5 +1,5 @@
 import React from 'react';
-import passImgSrc from '../assets/images/passageira_natural_1791509954174.jpg';
+import passImgSrc from '../assets/images/passageira_natural_1791509954174.webp';
 import { Link } from 'react-router-dom';
 import { User, CheckCircle2, ShieldCheck, Clock, Info } from 'lucide-react';
 
@@ -21,6 +21,8 @@ export function Passengers() {
               <img 
                 src={passImgSrc} 
                 alt="Passageira usando aplicativo" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/60 to-transparent" />

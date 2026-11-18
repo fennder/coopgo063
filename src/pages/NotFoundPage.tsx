@@ -1,10 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Home, ArrowLeft, Navigation, Phone, Users, Car } from 'lucide-react';
+import { SeoHead } from '../components/SeoHead';
 
 export function NotFoundPage() {
   return (
     <div className="min-h-[70vh] flex items-center justify-center py-16 px-4 bg-gray-50">
+      <SeoHead
+        title="Página não encontrada (404) | Coop63"
+        description="A rota acessada não foi encontrada no portal oficial da Coop63."
+        path="/404"
+        noindex
+      />
       <div className="max-w-xl w-full text-center bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100">
         <div className="w-20 h-20 bg-brand-green/10 text-brand-green rounded-full flex items-center justify-center mx-auto mb-6">
           <Navigation className="w-10 h-10 rotate-45" />

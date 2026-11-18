@@ -8,10 +8,18 @@ import { News } from '../components/News';
 import { AppDownload } from '../components/AppDownload';
 import { CTA } from '../components/CTA';
 import { Contact } from '../components/Contact';
+import { SeoHead } from '../components/SeoHead';
 
 export function Home() {
   return (
     <>
+      <SeoHead
+        title="Coop63 | Cooperativa de Transporte por Aplicativo no Tocantins"
+        description="A Coop63 é a cooperativa oficial de transporte privado no Tocantins. Peça sua corrida em Palmas com segurança, conforto e preço justo pelo aplicativo."
+        path="/"
+        image="/og-image.jpg"
+        type="website"
+      />
       <Hero />
       <Passengers />
       <Drivers />

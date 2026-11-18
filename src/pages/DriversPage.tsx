@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import drvImgSrc from '../assets/images/motorista_camisa_coop63_1794501549713.jpg';
+import drvImgSrc from '../assets/images/motorista_camisa_coop63_1794501549713.webp';
 import { DollarSign, ShieldAlert, BookOpen, Users, Award, HeadphonesIcon, ChevronRight, AlertCircle } from 'lucide-react';
 import { CTA } from '../components/CTA';
 import { AppDownload } from '../components/AppDownload';
+import { SeoHead } from '../components/SeoHead';
 
 export function DriversPage() {
   const benefits = [
@@ -15,8 +16,23 @@ export function DriversPage() {
     { icon: HeadphonesIcon, title: 'Suporte Humanizado', desc: 'Atendimento presencial e online sempre que você precisar.' },
   ];
 
+  const breadcrumbJsonLd = {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://coop63.coop.br/' },
+      { '@type': 'ListItem', position: 2, name: 'Para Motoristas', item: 'https://coop63.coop.br/motoristas' },
+    ],
+  };
+
   return (
     <div>
+      <SeoHead
+        title="Para Motoristas | Seja Cooperado na Coop63"
+        description="Sem passe antecipado: na Coop63 você só paga 15% quando roda, tem voz nas assembleias e suporte humano em Palmas. Baixe o app Motorista."
+        path="/motoristas"
+        image={drvImgSrc}
+        jsonLd={breadcrumbJsonLd}
+      />
       {/* Breadcrumb Header */}
       <div className="bg-gray-100 border-b border-gray-200 py-3.5">
         <div className="container mx-auto px-4 md:px-6">
@@ -31,7 +47,14 @@ export function DriversPage() {
       {/* Hero Section */}
       <section className="bg-brand-navy py-20 lg:py-28 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
-          <img src={drvImgSrc} alt="Motorista Cooperado Coop63" referrerPolicy="no-referrer" className="w-full h-full object-cover" />
+          <img
+            src={drvImgSrc}
+            alt="Motorista Cooperado Coop63"
+            fetchPriority="high"
+            loading="eager"
+            referrerPolicy="no-referrer"
+            className="w-full h-full object-cover"
+          />
         </div>
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6">
@@ -73,8 +96,10 @@ export function DriversPage() {
 
             <div className="rounded-3xl overflow-hidden shadow-2xl border-2 border-brand-green/40 bg-white group hover:border-brand-green transition-all">
               <img
-                src="/assets/aistudio/coop63entrada_676f39d7.jpeg"
+                src="/assets/aistudio/coop63entrada_676f39d7.webp"
                 alt="Aviso Coop63 - Passo a passo para entrar na cooperativa"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-auto object-contain block mx-auto transition-transform duration-500 group-hover:scale-[1.01]"
                 referrerPolicy="no-referrer"
               />

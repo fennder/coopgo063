@@ -1,5 +1,5 @@
 import React from 'react';
-import heroBg from '../assets/images/hero_coop63_branded.jpg';
+import heroBg from '../assets/images/hero_coop63_branded.webp';
 import { Link } from 'react-router-dom';
 import { User, Car, Globe } from 'lucide-react';
 import { BannerCarAnimation } from './BannerCarAnimation';
@@ -8,13 +8,14 @@ export function Hero() {
   return (
     <section id="inicio" className="relative min-h-[90vh] flex items-center pt-20 pb-16 lg:pb-24 overflow-hidden bg-brand-navy">
       {/* Background Image & Overlay with 70% opacity, featuring coop63.coop.br exclusively */}
-      <div 
-        className="absolute inset-0 z-0 opacity-70 transition-opacity duration-700"
-        style={{
-          backgroundImage: `url(${heroBg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
+      <img
+        src={heroBg}
+        alt=""
+        aria-hidden="true"
+        fetchPriority="high"
+        loading="eager"
+        decoding="sync"
+        className="absolute inset-0 z-0 w-full h-full object-cover object-center opacity-70 pointer-events-none"
       />
       <div className="absolute inset-0 z-10 bg-gradient-to-r from-brand-navy/95 via-brand-navy/70 to-transparent" />
       
@@ -74,6 +75,10 @@ export function Hero() {
                 <img
                   src="/logo-official.svg"
                   alt="Coop63 - Cooperativa de Mobilidade"
+                  width={460}
+                  height={280}
+                  fetchPriority="high"
+                  loading="eager"
                   className="w-full h-auto object-contain drop-shadow-2xl transition-transform duration-500 group-hover:scale-105"
                   referrerPolicy="no-referrer"
                 />

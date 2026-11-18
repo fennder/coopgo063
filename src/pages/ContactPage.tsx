@@ -2,10 +2,33 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import { Contact } from '../components/Contact';
+import { SeoHead } from '../components/SeoHead';
 
 export function ContactPage() {
+  const contactJsonLd = [
+    {
+      '@type': 'ContactPage',
+      name: 'Contato e Suporte Coop63',
+      url: 'https://coop63.coop.br/contato',
+      description: 'Entre em contato com a Coop63 em Palmas - Tocantins via formulário, e-mail ou WhatsApp oficial.',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://coop63.coop.br/' },
+        { '@type': 'ListItem', position: 2, name: 'Contato e Suporte', item: 'https://coop63.coop.br/contato' },
+      ],
+    },
+  ];
+
   return (
     <div>
+      <SeoHead
+        title="Contato e Suporte | Coop63 Palmas - Tocantins"
+        description="Fale com a equipe da Coop63 em Palmas - TO pelo WhatsApp (63) 98498-4085, e-mail ou formulário de contato para passageiros e motoristas."
+        path="/contato"
+        jsonLd={contactJsonLd}
+      />
       {/* Breadcrumb Header */}
       <div className="bg-gray-100 border-b border-gray-200 py-3.5">
         <div className="container mx-auto px-4 md:px-6">

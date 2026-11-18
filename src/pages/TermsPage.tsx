@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight, FileText, ShieldCheck, Scale, CheckCircle2, Phone, AlertCircle } from 'lucide-react';
+import { SeoHead } from '../components/SeoHead';
 
 export function TermsPage() {
   const [activeSection, setActiveSection] = useState('1');
@@ -20,6 +21,12 @@ export function TermsPage() {
 
   return (
     <div className="bg-gray-50 min-h-screen">
+      <SeoHead
+        title="Termos e Condições de Uso | Coop63"
+        description="Leia os Termos e Condições de Uso dos aplicativos e plataforma digital da COOPGO63 Cooperativa de Transporte Privado do Tocantins."
+        path="/termos"
+        noindex
+      />
       {/* Breadcrumb Header */}
       <div className="bg-gray-100 border-b border-gray-200 py-3.5">
         <div className="container mx-auto px-4 md:px-6">

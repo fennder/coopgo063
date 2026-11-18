@@ -1,21 +1,49 @@
-import newsAppImg from '../assets/images/news_app_coop63_1788912399020.jpg';
-import driverInCarImg from '../assets/images/motorista_camisa_branca_1794492908369.jpg';
-import supermarketImg from '../assets/images/supermercado_camisa_verde_1794493072031.jpg';
+import newsAppImg from '../assets/images/news_app_coop63_1788912399020.webp';
+import driverInCarImg from '../assets/images/motorista_camisa_branca_1794492908369.webp';
+import supermarketImg from '../assets/images/supermercado_camisa_verde_1794493072031.webp';
+import stjDriverImg from '../assets/images/coop63_stj_decisao_motorista_1794945412714.webp';
 
 export interface NewsItem {
   id: number;
+  slug: string;
   image: string;
   category: 'Comunicado' | 'Motoristas' | 'Passageiros' | 'Coop63';
   title: string;
   summary: string;
   content: string[];
   date: string;
+  isoDate: string;
   readTime: string;
 }
 
 export const newsArticles: NewsItem[] = [
   {
+    id: 11,
+    slug: 'stj-suspende-liminar-trabalhista-passe-motoristas-uber',
+    image: stjDriverImg,
+    category: 'Motoristas',
+    title: 'STJ suspende liminar trabalhista e libera provisoriamente o “Passe para Motoristas” da Uber',
+    summary: 'Decisão do ministro Raul Araújo divulgada em 17 de novembro permite a retomada imediata das cobranças da assinatura enquanto o tribunal define se o caso cabe à Justiça Comum ou à Trabalhista.',
+    content: [
+      'O Superior Tribunal de Justiça (STJ) suspendeu provisoriamente a liminar da Justiça do Trabalho que proibia a cobrança do programa “Passe para Motoristas” da Uber em todo o Brasil. A decisão, assinada pelo ministro Raul Araújo e divulgada nesta terça-feira (17 de novembro de 2026), permite que a plataforma retome imediatamente as adesões, renovações e cobranças da assinatura semanal enquanto o tribunal decide qual ramo do Judiciário tem competência para julgar o caso.',
+      'NOTA: Embora a mídia e o setor frequentemente associem as duas gigantes no debate regulatório, a ação civil pública atual do Ministério Público do Trabalho e a decisão específica de hoje do STJ tratam exclusivamente do programa “Passe para Motoristas” da Uber (e não da 99).',
+      '### Clipping de Notícias — Decisão do STJ (17/11/2026)',
+      'CLIPPING:\nG1 | STJ suspende decisão que impedia cobrança de taxa da Uber para motoristas em todo o país | Destaca a reviravolta jurídica: o ministro Raul Araújo atendeu ao pedido de conflito de competência movido pela Uber, derrubando a liminar da 9ª Vara do Trabalho de Salvador.\nSpaceMoney | STJ suspende liminar trabalhista e libera provisoriamente o Passe para Motoristas da Uber | Ressalta o argumento jurídico usado pelo ministro: precedentes da Segunda Seção do STJ indicam que disputas entre apps e motoristas sem pedido de vínculo empregatício cabem à Justiça Comum, e não à Trabalhista.\nBPMoney | STJ suspende bloqueio do Passe para Motoristas da Uber | Explica o funcionamento do modelo de assinatura (pagamento fixo antecipado em troca de 0% de taxa variável por corrida) e o argumento do MPT de que o modelo transfere o risco econômico do negócio ao condutor.\nSou de Palmas | STJ suspende proibição de taxa semanal da Uber e permite retomada de cobranças a motoristas em todo o Brasil | Detalha os próximos passos processuais: o STJ deu prazo de 10 dias para manifestação das partes e posterior parecer do Ministério Público Federal antes de definir o juízo definitivo.',
+      '### Contexto e Linha do Tempo do Caso',
+      'TIMELINE:\n25 de maio de 2026 — Lançamento | A Uber inicia os testes do Passe para Motoristas (nos formatos por tempo ou por limite de ganhos), substituindo a comissão percentual por corrida por uma taxa fixa pré-paga, chegando a 42 cidades e ultrapassando R$ 1.000 mensais para motoristas de tempo integral.\nAgosto de 2026 — Ação do MPT | O Ministério Público do Trabalho na Bahia ajuíza Ação Civil Pública pedindo o fim do programa, devolução dos valores cobrados e indenização de R$ 321 milhões por danos morais coletivos.\n11 de novembro de 2026 — Bloqueio Trabalhista | O juiz Luciano Dorea Martinez Carreiro, da 9ª Vara do Trabalho de Salvador, concede liminar suspendendo o programa em âmbito nacional sob pena de multa diária de até R$ 300 mil.\n17 de novembro de 2026 — Reviravolta no STJ | Ao analisar o conflito de competência suscitado pela Uber, o ministro Raul Araújo suspende a liminar trabalhista por risco de decisões conflitantes entre esferas judiciais, ressaltando que o mérito sobre a legalidade da taxa ainda não foi julgado.',
+      '### Posição da COOP63: aqui não existe passe',
+      'Diante das idas e vindas judiciais envolvendo a cobrança de assinaturas antecipadas nas plataformas tradicionais, a COOP63 reforça a segurança e a previsibilidade do modelo cooperativista adotado em Palmas desde a sua fundação: na cooperativa não existe passe.',
+      'Na COOP63, o motorista cooperado não precisa desembolsar valores fixos antecipados nem assumir o risco de pagar para trabalhar sem garantia de retorno. Nossa taxa é zero para os motoristas.',
+      'Além disso, o cooperado é sócio da cooperativa, possui voz e voto nas assembleias gerais e participa diretamente das decisões sobre regras e tarifas, enquanto os recursos que permanecem na cooperativa circulam localmente em Palmas e no Tocantins.',
+      'FONTES DA MATÉRIA:\nClipping jornalístico da decisão monocrática proferida pelo ministro Raul Araújo no Superior Tribunal de Justiça (STJ) em 17 de novembro de 2026, em conflito de competência referente à Ação Civil Pública do MPT na Bahia.\n\nVeículos consultados (17 nov. 2026):\n• G1: "STJ suspende decisão que impedia cobrança de taxa da Uber para motoristas em todo o país".\n• SpaceMoney: "STJ suspende liminar trabalhista e libera provisoriamente o Passe para Motoristas da Uber".\n• BPMoney: "STJ suspende bloqueio do Passe para Motoristas da Uber".\n• Sou de Palmas: "STJ suspende proibição de taxa semanal da Uber e permite retomada de cobranças a motoristas em todo o Brasil".'
+    ],
+    date: '17 de novembro de 2026',
+    isoDate: '2026-11-17',
+    readTime: '4 min de leitura'
+  },
+  {
     id: 10,
+    slug: 'diretrizes-corridas-supermercado-aplicativo-coop63',
     image: supermarketImg,
     category: 'Comunicado',
     title: 'Comunicado Oficial: Diretrizes para Corridas de Supermercado no Aplicativo',
@@ -26,16 +54,18 @@ export const newsArticles: NewsItem[] = [
       'Atenção importante: a ativação dessa opção não garante tarifas ou valores maiores para esse tipo de corrida. O valor do trajeto segue as diretrizes habituais do app.',
       'Portanto, orientamos a todos:',
       '• Marque a opção: se você aceita e tem disponibilidade para realizar corridas de supermercado;\n• Deixe desmarcada: se não deseja receber esse tipo de solicitação na sua rotina.',
-      'IMAGE:/assets/aistudio/PreferenciaCorrida_ee1c318a.jpeg | Tela de Preferências de corrida no app Coop63 com o botão Supermercado',
+      'IMAGE:/assets/aistudio/PreferenciaCorrida_ee1c318a.webp | Tela de Preferências de corrida no app Coop63 com o botão Supermercado',
       'Pedimos a todos que configurem essa opção de acordo com sua disponibilidade e preferência, evitando recusas desnecessárias e contribuindo para uma melhor experiência dos passageiros e cooperados.',
       'A colaboração e a organização de cada um fortalecem a qualidade do nosso serviço para toda a comunidade de Palmas!',
       'COOP63 – Mobilidade que conecta!'
     ],
     date: '11 de novembro de 2026',
+    isoDate: '2026-11-11',
     readTime: '2 min de leitura'
   },
   {
     id: 9,
+    slug: 'justica-trabalho-suspende-passe-motoristas-uber',
     image: driverInCarImg,
     category: 'Motoristas',
     title: 'Justiça do Trabalho suspende “Passe para Motoristas” da Uber em todo o país',
@@ -59,11 +89,13 @@ export const newsArticles: NewsItem[] = [
       'FONTES DA MATÉRIA:\nDecisão liminar proferida na Ação Civil Pública nº 0000773-47.2026.5.05.0009 pela 9ª Vara do Trabalho de Salvador (TRT-5).\n\nReferências e cobertura jornalística consultada (ABNT NBR 6023:2018):\n• BRASIL. Lei nº 5.764, de 16 de dezembro de 1971. Define a Política Nacional de Cooperativismo.\n• Metrópoles: "Justiça suspende nova cobrança de taxa para motoristas da Uber" (11 nov. 2026).\n• InfoMoney: "Justiça do Trabalho suspende \'Passe para Motoristas\' da Uber em todo país" (11 nov. 2026).\n• Portal O Dia: "Justiça suspende \'Passe para Motoristas\' da Uber em todo país" (11 nov. 2026).\n• Portal 98 FM Natal: "Justiça suspende cobrança de taxa para motoristas aceitarem corridas na Uber" (11 nov. 2026).\n• Canaltech: "Uber é processada por R$ 321 milhões por taxa cobrada de motoristas" (2026).\n• AutoPapo: "MPT processa Uber em R$ 321 milhões por motoristas terem que pagar para trabalhar" (28 ago. 2026).\n• O Povo: "Uber é processada no Brasil por taxa cobrada de motoristas, mas caso ainda depende da Justiça" (28 ago. 2026).\n• Mobile Time: "MPT processa Uber por taxa sobre corridas e pede indenização de R$ 321 milhões" (26 ago. 2026).'
     ],
     date: '11 de novembro de 2026',
+    isoDate: '2026-11-11',
     readTime: '5 min de leitura'
   },
   {
     id: 8,
-    image: '/assets/aistudio/Presid_26eb7b3d.jpeg',
+    slug: 'coop63-experience-quanto-passes-custam-motorista-dono',
+    image: '/assets/aistudio/Presid_26eb7b3d.webp',
     category: 'Coop63',
     title: 'No Coop63 Experience, presidente mostra quanto os passes custam e apresenta o modelo em que o motorista é dono',
     summary: 'Jullian Miranda colocou no telão a conta dos passes cobrados pelas plataformas e explicou por que, na Coop63, o motorista só paga quando roda.',
@@ -85,11 +117,13 @@ export const newsArticles: NewsItem[] = [
       'FONTES DA MATÉRIA:\nReferências e fontes consultadas (ABNT NBR 6023:2018):\n• BRASIL. Lei nº 5.764, de 16 de dezembro de 1971. Define a Política Nacional de Cooperativismo, institui o regime jurídico das sociedades cooperativas, e dá outras providências. Diário Oficial da União: seção 1, Brasília, DF, 16 dez. 1971.\n• COOP63 – COOPERATIVA DE MOBILIDADE. Seja dono do seu próprio trabalho: apresentação de adesão. Palmas: COOP63, nov. 2026. Apresentação em PowerPoint. Documento interno.\n• SÓ 1 em cada 5 motociclistas de aplicativo tem cobertura previdenciária. A Crítica, Manaus, 2026.\n• TEIXEIRA, Isadora; SCHWINGEL, Samara. Justiça suspende nova cobrança de taxa para motoristas da Uber. Metrópoles, Brasília, 11 nov. 2026. Coluna Grande Angular.\n• TRABALHADORES por app chegam a 2 milhões, mas dois terços não têm previdência. Movimento Econômico, 4 set. 2026.'
     ],
     date: '7 de novembro de 2026',
+    isoDate: '2026-11-07',
     readTime: '5 min de leitura'
   },
-   {
+  {
     id: 7,
-    image: '/assets/aistudio/IMG_8576_1f8ca5f0.jpg',
+    slug: 'coop63-experience-inovacao-forca-cooperativista',
+    image: '/assets/aistudio/IMG_8576_1f8ca5f0.webp',
     category: 'Coop63',
     title: 'Coop63 Experience: Inovação e Força Cooperativista',
     summary: 'O evento reuniu cooperados para debater o futuro da mobilidade, celebrar conquistas e fortalecer o cooperativismo.',
@@ -102,10 +136,12 @@ export const newsArticles: NewsItem[] = [
       '📅 Data: 7 de novembro (sábado)\n⏰ Horário: das 9h às 12h\n📍 Local: Auditório da DPE-TO (https://maps.app.goo.gl/DwZer5jK22cY6DWD7)'
     ],
     date: '7 de novembro de 2026',
+    isoDate: '2026-11-07',
     readTime: '4 min de leitura'
   },
   /*{
     id: 6,
+    slug: 'novos-pontos-embarque-desembarque-mapeados',
     image: newsAppImg,
     category: 'Comunicado',
     title: 'Novos pontos de embarque e desembarque mapeados na cidade',
@@ -116,11 +152,13 @@ export const newsArticles: NewsItem[] = [
       'Os novos locais contam com sinalização orientativa no aplicativo tanto para passageiros quanto para os motoristas cooperados. Consulte o mapa no app para conferir o ponto mais próximo de você.'
     ],
     date: '30 de outubro de 2026',
+    isoDate: '2026-10-30',
     readTime: '3 min de leitura'
   },*/
   {
     id: 5,
-    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    slug: 'campanha-motorista-valorizado-reconhecido',
+    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
     category: 'Motoristas',
     title: 'Campanha: Motorista Valorizado e Reconhecido',
     summary: 'A Coop63 valoriza quem move a nossa cidade! Conheça as premiações e incentivos exclusivos para os cooperados este mês.',
@@ -130,11 +168,13 @@ export const newsArticles: NewsItem[] = [
       '"Nosso objetivo é demonstrar que no modelo cooperativista todos crescem juntos e o trabalho de cada um faz a diferença", destacou a diretoria da Coop63.'
     ],
     date: '25 de outubro de 2026',
+    isoDate: '2026-10-25',
     readTime: '4 min de leitura'
   },
   {
     id: 4,
-    image: 'https://images.unsplash.com/photo-1512428559087-560fa5ceab42?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    slug: 'dicas-seguranca-praticidade-viagens-diarias',
+    image: 'https://images.unsplash.com/photo-1512428559087-560fa5ceab42?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
     category: 'Passageiros',
     title: 'Dicas de segurança e praticidade para suas viagens diárias',
     summary: 'Confira nossas recomendações para uma viagem ainda mais segura, desde a solicitação até a chegada ao seu destino.',
@@ -145,11 +185,13 @@ export const newsArticles: NewsItem[] = [
       '3. Avalie o motorista ao término da corrida; seu feedback é indispensável para mantermos o alto padrão de serviço.'
     ],
     date: '20 de outubro de 2026',
+    isoDate: '2026-10-20',
     readTime: '3 min de leitura'
   },
   /*{
     id: 3,
-    image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    slug: 'assembleia-geral-ordinaria-prestacao-contas',
+    image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
     category: 'Coop63',
     title: 'Assembleia Geral Ordinária de Prestação de Contas',
     summary: 'Participe da assembleia da cooperativa e ajude a deliberar sobre novos investimentos e melhorias para a nossa frota.',
@@ -159,11 +201,13 @@ export const newsArticles: NewsItem[] = [
       'A participação de cada cooperado é essencial para o fortalecimento da nossa democracia interna.'
     ],
     date: '14 de outubro de 2026',
+    isoDate: '2026-10-14',
     readTime: '2 min de leitura'
   },*/
   /*{
     id: 2,
-    image: 'https://images.unsplash.com/photo-1616455579100-2ceaa4eb2d37?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    slug: 'parceria-redes-postos-combustivel',
+    image: 'https://images.unsplash.com/photo-1616455579100-2ceaa4eb2d37?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
     category: 'Motoristas',
     title: 'Parceria com Redes de Postos de Combustível',
     summary: 'Fechamos uma nova parceria com redes de postos, oferecendo descontos expressivos no litro do combustível para motoristas cadastrados.',
@@ -173,11 +217,13 @@ export const newsArticles: NewsItem[] = [
       'O desconto é válido para gasolina, etanol e GNV em todas as unidades credenciadas.'
     ],
     date: '06 de outubro de 2026',
+    isoDate: '2026-10-06',
     readTime: '3 min de leitura'
   },*/
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    slug: 'atualizacao-aplicativo-coop63-versao-2-4',
+    image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
     category: 'Coop63',
     title: 'Nova atualização do Aplicativo Coop63 disponível para download',
     summary: 'Versão 2.4 traz melhorias de estabilidade, menor consumo de bateria e cálculo de trajetos mais veloz.',
@@ -187,6 +233,7 @@ export const newsArticles: NewsItem[] = [
       'Atualize seu aplicativo agora mesmo pela sua loja oficial para aproveitar todas as novidades.'
     ],
     date: '01 de outubro de 2026',
+    isoDate: '2026-10-01',
     readTime: '2 min de leitura'
   }
 ];

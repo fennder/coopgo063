@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Handshake, HeartHandshake, ShieldCheck, ChevronRight, Target, Eye } from 'lucide-react';
 import { CTA } from '../components/CTA';
+import { SeoHead } from '../components/SeoHead';
 
 export function AboutPage() {
   const values = [
@@ -22,8 +23,30 @@ export function AboutPage() {
     },
   ];
 
+  const aboutJsonLd = [
+    {
+      '@type': 'AboutPage',
+      name: 'Sobre a Coop63',
+      url: 'https://coop63.coop.br/sobre',
+      description: 'Conheça a história, missão, visão e valores da COOPGO63, cooperativa de mobilidade urbana do Tocantins.',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://coop63.coop.br/' },
+        { '@type': 'ListItem', position: 2, name: 'Sobre a Coop63', item: 'https://coop63.coop.br/sobre' },
+      ],
+    },
+  ];
+
   return (
     <div>
+      <SeoHead
+        title="Sobre a Coop63 | História, Missão e Valores"
+        description="Conheça a história da Coop63, cooperativa de mobilidade urbana no Tocantins fundada por motoristas para gerar valor justo em Palmas e região."
+        path="/sobre"
+        jsonLd={aboutJsonLd}
+      />
       {/* Breadcrumb Header */}
       <div className="bg-gray-100 border-b border-gray-200 py-3.5">
         <div className="container mx-auto px-4 md:px-6">
@@ -58,6 +81,10 @@ export function AboutPage() {
                   <img
                     src="/logo-official.svg"
                     alt="Logo Oficial Coop63"
+                    width={384}
+                    height={240}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-auto object-contain drop-shadow-md transition-transform duration-500 group-hover:scale-105"
                     referrerPolicy="no-referrer"
                   />

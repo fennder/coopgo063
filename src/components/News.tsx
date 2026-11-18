@@ -31,10 +31,12 @@ export function News() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {newsItems.map((item) => (
             <div key={item.id} className="bg-white rounded-2xl overflow-hidden shadow-lg group hover:-translate-y-1 transition-transform duration-300 flex flex-col">
-              <Link to={`/noticias/${item.id}`} className="relative h-48 overflow-hidden block">
+              <Link to={`/noticias/${item.slug}`} className="relative h-48 overflow-hidden block">
                 <img 
                   src={item.image} 
                   alt={item.title} 
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute top-4 left-4 bg-brand-green text-brand-navy text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
@@ -42,7 +44,7 @@ export function News() {
                 </div>
               </Link>
               <div className="p-6 flex flex-col flex-grow">
-                <Link to={`/noticias/${item.id}`} className="block">
+                <Link to={`/noticias/${item.slug}`} className="block">
                   <h3 className="text-xl font-bold text-brand-navy mb-3 line-clamp-2 group-hover:text-brand-green transition-colors">
                     {item.title}
                   </h3>
@@ -58,7 +60,7 @@ export function News() {
                     {item.date}
                   </span>
                   <Link 
-                    to={`/noticias/${item.id}`}
+                    to={`/noticias/${item.slug}`}
                     className="text-brand-navy font-bold hover:text-brand-green transition-colors inline-flex items-center gap-1"
                   >
                     Ler mais <ArrowRight className="w-4 h-4" />

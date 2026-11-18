@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import passImgSrc from '../assets/images/passageira_natural_1791509954174.jpg';
+import passImgSrc from '../assets/images/passageira_natural_1791509954174.webp';
 import { ShieldCheck, Clock, MapPin, CheckCircle2, Star, Smartphone, ChevronRight } from 'lucide-react';
 import { CTA } from '../components/CTA';
 import { AppDownload } from '../components/AppDownload';
+import { SeoHead } from '../components/SeoHead';
 
 export function PassengersPage() {
   const features = [
@@ -15,8 +16,23 @@ export function PassengersPage() {
     { icon: Smartphone, title: 'App Intuitivo', desc: 'Fácil de usar, desde a chamada até o pagamento.' },
   ];
 
+  const breadcrumbJsonLd = {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://coop63.coop.br/' },
+      { '@type': 'ListItem', position: 2, name: 'Para Passageiros', item: 'https://coop63.coop.br/passageiros' },
+    ],
+  };
+
   return (
     <div>
+      <SeoHead
+        title="Para Passageiros | Coop63 Mobilidade no Tocantins"
+        description="Viaje com motoristas verificados, preço transparente e suporte local em Palmas e região. Baixe o aplicativo Coop63 Passageiro para Android e iOS."
+        path="/passageiros"
+        image={passImgSrc}
+        jsonLd={breadcrumbJsonLd}
+      />
       {/* Breadcrumb Header */}
       <div className="bg-gray-100 border-b border-gray-200 py-3.5">
         <div className="container mx-auto px-4 md:px-6">
@@ -31,7 +47,13 @@ export function PassengersPage() {
       {/* Hero Section */}
       <section className="bg-brand-navy py-20 lg:py-28 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
-          <img src={passImgSrc} alt="Passageiros Coop63" className="w-full h-full object-cover" />
+          <img
+            src={passImgSrc}
+            alt="Passageiros Coop63"
+            fetchPriority="high"
+            loading="eager"
+            className="w-full h-full object-cover"
+          />
         </div>
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6">

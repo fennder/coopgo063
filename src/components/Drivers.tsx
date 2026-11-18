@@ -1,5 +1,5 @@
 import React from 'react';
-import drvImgSrc from '../assets/images/motorista_camisa_coop63_1794501549713.jpg';
+import drvImgSrc from '../assets/images/motorista_camisa_coop63_1794501549713.webp';
 import { Link } from 'react-router-dom';
 import { Car, ShieldAlert, DollarSign, BookOpen, Users, Handshake } from 'lucide-react';
 
@@ -22,6 +22,8 @@ export function Drivers() {
               <img 
                 src={drvImgSrc} 
                 alt="Motorista cooperado no volante sorrindo" 
+                loading="lazy"
+                decoding="async"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />

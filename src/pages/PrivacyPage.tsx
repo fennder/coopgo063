@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight, Lock, ShieldCheck, Eye, Database, Phone, CheckCircle2, UserCheck } from 'lucide-react';
+import { SeoHead } from '../components/SeoHead';
 
 export function PrivacyPage() {
   const [activeSection, setActiveSection] = useState('1');
@@ -20,6 +21,12 @@ export function PrivacyPage() {
 
   return (
     <div className="bg-gray-50 min-h-screen">
+      <SeoHead
+        title="Política de Privacidade e LGPD | Coop63"
+        description="Saiba como a Coop63 coleta, trata e protege seus dados pessoais e de geolocalização em conformidade com a LGPD (Lei 13.709/2018)."
+        path="/privacidade"
+        noindex
+      />
       {/* Breadcrumb Header */}
       <div className="bg-gray-100 border-b border-gray-200 py-3.5">
         <div className="container mx-auto px-4 md:px-6">

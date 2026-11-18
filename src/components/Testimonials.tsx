@@ -1,6 +1,6 @@
 import React from 'react';
 import { Star, Quote } from 'lucide-react';
-import ironImg from '../assets/images/iron_milhomem_1791655360983.jpg';
+import ironImg from '../assets/images/iron_milhomem_1791655360983.webp';
 
 export function Testimonials() {
   const testimonials = [
@@ -61,6 +61,10 @@ export function Testimonials() {
                 <img 
                   src={testimonial.image} 
                   alt={testimonial.name} 
+                  width={56}
+                  height={56}
+                  loading="lazy"
+                  decoding="async"
                   className="w-14 h-14 rounded-full object-cover border-2 border-brand-green"
                   referrerPolicy="no-referrer"
                 />

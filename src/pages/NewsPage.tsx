@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Search, ChevronRight } from 'lucide-react';
 import { CTA } from '../components/CTA';
 import { newsArticles } from '../data/newsData';
+import { SeoHead } from '../components/SeoHead';
 
 export function NewsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('Todos');
@@ -21,8 +22,30 @@ export function NewsPage() {
     });
   }, [selectedCategory, searchQuery]);
 
+  const newsListingJsonLd = [
+    {
+      '@type': 'CollectionPage',
+      name: 'Notícias e Comunicados Coop63',
+      url: 'https://coop63.coop.br/noticias',
+      description: 'Notícias, comunicados oficiais, eventos e novidades sobre mobilidade cooperativa no Tocantins.',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://coop63.coop.br/' },
+        { '@type': 'ListItem', position: 2, name: 'Notícias e Comunicados', item: 'https://coop63.coop.br/noticias' },
+      ],
+    },
+  ];
+
   return (
     <div>
+      <SeoHead
+        title="Notícias e Comunicados | Coop63 Tocantins"
+        description="Acompanhe as últimas notícias, comunicados oficiais, decisões do setor e novidades da cooperativa Coop63 em Palmas e no Tocantins."
+        path="/noticias"
+        jsonLd={newsListingJsonLd}
+      />
       {/* Breadcrumb */}
       <div className="bg-gray-100 border-b border-gray-200 py-3.5">
         <div className="container mx-auto px-4 md:px-6">
@@ -102,10 +125,12 @@ export function NewsPage() {
                   key={item.id}
                   className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 flex flex-col group"
                 >
-                  <Link to={`/noticias/${item.id}`} className="relative h-48 overflow-hidden block">
+                  <Link to={`/noticias/${item.slug}`} className="relative h-48 overflow-hidden block">
                     <img
                       src={item.image}
                       alt={item.title}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute top-4 left-4 bg-brand-green text-brand-navy text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
@@ -114,7 +139,7 @@ export function NewsPage() {
                   </Link>
 
                   <div className="p-6 flex flex-col flex-grow">
-                    <Link to={`/noticias/${item.id}`} className="block">
+                    <Link to={`/noticias/${item.slug}`} className="block">
                       <h3 className="text-xl font-bold text-brand-navy mb-3 group-hover:text-brand-green transition-colors line-clamp-2">
                         {item.title}
                       </h3>
@@ -127,7 +152,7 @@ export function NewsPage() {
                         {item.date}
                       </span>
                       <Link
-                        to={`/noticias/${item.id}`}
+                        to={`/noticias/${item.slug}`}
                         className="text-brand-navy font-bold hover:text-brand-green transition-colors inline-flex items-center gap-1 text-sm"
                       >
                         Ler mais <ArrowRight className="w-4 h-4" />
