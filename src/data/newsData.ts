@@ -3,11 +3,14 @@ import driverInCarImg from '../assets/images/motorista_camisa_branca_17944929083
 import supermarketImg from '../assets/images/supermercado_camisa_verde_1794493072031.webp';
 import stjDriverImg from '../assets/images/coop63_stj_decisao_motorista_1794945412714.webp';
 
+export type NewsCategory = 'Comunicado' | 'Motoristas' | 'Passageiros' | 'Coop63';
+
 export interface NewsItem {
   id: number;
   slug: string;
   image: string;
-  category: 'Comunicado' | 'Motoristas' | 'Passageiros' | 'Coop63';
+  category: NewsCategory;
+  categories?: NewsCategory[];
   title: string;
   summary: string;
   content: string[];
@@ -17,6 +20,29 @@ export interface NewsItem {
 }
 
 export const newsArticles: NewsItem[] = [
+  {
+    id: 12,
+    slug: 'promocao-10-reais-credito-coop63-mais-2000-passageiros-cadastrados',
+    image: '/assets/aistudio/promocao10_a0a1ff38.jpeg',
+    category: 'Coop63',
+    categories: ['Passageiros', 'Motoristas', 'Coop63'],
+    title: 'Promoção de R$ 10,00 em crédito é finalizada com sucesso e supera 2.000 passageiros cadastrados',
+    summary: 'Realizada entre 31 de outubro e 15 de novembro de 2026, a campanha promocional da Coop63 atingiu a marca de mais de 2.000 passageiros cadastrados, fortalecendo corridas para motoristas e economia para usuários.',
+    content: [
+      'A Coop63 celebra o encerramento com sucesso da Promoção de R$ 10,00 em crédito, ação especial que teve início em 31 de outubro de 2026 e foi finalizada em 15 de novembro de 2026. Ao longo do período da campanha, a plataforma superou a expressiva marca de mais de 2.000+ passageiros cadastrados.',
+      'Desenvolvida para aproximar ainda mais a comunidade do modelo cooperativo de mobilidade urbana, a iniciativa trouxe vantagens diretas tanto para quem utiliza o aplicativo para se deslocar quanto para quem dirige todos os dias pela cooperativa.',
+      '### Cronograma da Campanha',
+      'TIMELINE:\n31 de outubro de 2026 — Início da Promoção | Lançamento oficial da campanha promocional de R$ 10,00 em crédito para novos passageiros no aplicativo da Coop63.\n15 de novembro de 2026 — Finalização com Sucesso | Encerramento oficial da ação superando a marca de mais de 2.000+ passageiros cadastrados na plataforma.',
+      '### Impacto para Passageiros, Motoristas e para a Coop63',
+      '• Para os Passageiros: a promoção garantiu R$ 10,00 em crédito para experimentar o aplicativo Coop63, conhecendo na prática um atendimento próximo, veículos vistoriados e preços justos e transparentes em cada corrida.\n• Para os Motoristas Cooperados: a chegada de mais de dois mil novos cadastros amplia diretamente o fluxo de solicitações de viagens na cidade, gerando mais oportunidades de faturamento para quem roda com a cooperativa.\n• Para a Coop63: o resultado confirma a confiança da população no cooperativismo tocantinense, mantendo os recursos circulando localmente e consolidando uma alternativa humana e sustentável no transporte por aplicativo.',
+      '### Agradecimento Oficial',
+      'A Coop63 agradece a todos os passageiros e motoristas cooperados que participaram, compartilharam a campanha e confiaram em nosso trabalho entre os dias 31 de outubro e 15 de novembro. Seguimos trabalhando juntos por uma mobilidade cada vez mais justa e conectada!',
+      'COOP63 – Mobilidade que conecta!'
+    ],
+    date: '19 de novembro de 2026',
+    isoDate: '2026-11-19',
+    readTime: '3 min de leitura'
+  },
   {
     id: 11,
     slug: 'stj-suspende-liminar-trabalhista-passe-motoristas-uber',

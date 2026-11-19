@@ -51,6 +51,9 @@ export function NewsDetailPage() {
     ? article.image
     : `https://coop63.coop.br${article.image.startsWith('/') ? article.image : `/${article.image}`}`;
 
+  const articleCategories =
+    article.categories && article.categories.length > 0 ? article.categories : [article.category];
+
   const articleJsonLd = [
     {
       '@type': 'NewsArticle',
@@ -59,7 +62,7 @@ export function NewsDetailPage() {
       image: [articleImageUrl],
       datePublished: article.isoDate,
       dateModified: article.isoDate,
-      articleSection: article.category,
+      articleSection: articleCategories.join(', '),
       inLanguage: 'pt-BR',
       mainEntityOfPage: {
         '@type': 'WebPage',
@@ -98,7 +101,7 @@ export function NewsDetailPage() {
         image={article.image}
         type="article"
         publishedTime={article.isoDate}
-        articleCategory={article.category}
+        articleCategory={articleCategories.join(', ')}
         jsonLd={articleJsonLd}
       />
       {/* Breadcrumb Header */}
@@ -135,9 +138,16 @@ export function NewsDetailPage() {
             </button>
           </div>
 
-          <div className="inline-flex items-center gap-2 bg-brand-green/10 text-brand-green px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
-            <Tag className="w-3 h-3" />
-            <span>{article.category}</span>
+          <div className="flex flex-wrap items-center gap-2 mb-4">
+            {articleCategories.map((cat) => (
+              <div
+                key={cat}
+                className="inline-flex items-center gap-1.5 bg-brand-green/10 text-brand-green px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider"
+              >
+                <Tag className="w-3 h-3" />
+                <span>{cat}</span>
+              </div>
+            ))}
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-navy leading-tight mb-6">
@@ -460,9 +470,16 @@ export function NewsDetailPage() {
                       decoding="async"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <span className="absolute top-3 left-3 bg-brand-navy/90 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full uppercase">
-                      {item.category}
-                    </span>
+                    <div className="absolute top-3 left-3 right-3 flex flex-wrap gap-1">
+                      {(item.categories ?? [item.category]).map((cat) => (
+                        <span
+                          key={cat}
+                          className="bg-brand-navy/90 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase"
+                        >
+                          {cat}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                   <div className="p-5 flex flex-col flex-grow">
                     <h3 className="font-bold text-brand-navy group-hover:text-brand-green transition-colors line-clamp-2 mb-2">

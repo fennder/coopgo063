@@ -349,7 +349,10 @@ async function main() {
           image: [imageUrl],
           datePublished: article.isoDate || TODAY_ISO,
           dateModified: article.isoDate || TODAY_ISO,
-          articleSection: article.category,
+          articleSection:
+            article.categories && article.categories.length > 0
+              ? article.categories.join(', ')
+              : article.category,
           inLanguage: 'pt-BR',
           mainEntityOfPage: {
             '@type': 'WebPage',

@@ -39,8 +39,15 @@ export function News() {
                   decoding="async"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute top-4 left-4 bg-brand-green text-brand-navy text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
-                  {item.category}
+                <div className="absolute top-4 left-4 right-4 flex flex-wrap gap-1.5">
+                  {(item.categories ?? [item.category]).map((cat) => (
+                    <span
+                      key={cat}
+                      className="bg-brand-green text-brand-navy text-[11px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-sm"
+                    >
+                      {cat}
+                    </span>
+                  ))}
                 </div>
               </Link>
               <div className="p-6 flex flex-col flex-grow">
