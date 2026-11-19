@@ -15,7 +15,7 @@ export function Hero() {
         fetchPriority="high"
         loading="eager"
         decoding="sync"
-        className="absolute inset-0 z-0 w-full h-full object-cover object-center opacity-70 pointer-events-none"
+        className="absolute inset-0 z-0 w-full h-full object-cover object-center opacity-70 pointer-events-none animate-hero-film"
       />
       <div className="absolute inset-0 z-10 bg-gradient-to-r from-brand-navy/95 via-brand-navy/70 to-transparent" />
       
