@@ -3,6 +3,7 @@ import { Outlet, ScrollRestoration, useLocation } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { CookieConsentBanner } from '../components/CookieConsentBanner';
+import { ComunicadoModal } from '../components/ComunicadoModal';
 
 export function Layout() {
   const { pathname } = useLocation();
@@ -19,6 +20,7 @@ export function Layout() {
       </main>
       <Footer />
       <CookieConsentBanner />
+      <ComunicadoModal />
       <ScrollRestoration />
     </div>
   );

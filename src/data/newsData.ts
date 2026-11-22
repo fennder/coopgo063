@@ -21,6 +21,31 @@ export interface NewsItem {
 
 export const newsArticles: NewsItem[] = [
   {
+    id: 13,
+    slug: 'agradecimento-aos-cooperados-coop63-759-corridas-30-dias',
+    image: newsAppImg,
+    category: 'Comunicado',
+    categories: ['Comunicado', 'Motoristas', 'Coop63'],
+    title: 'Agradecimento aos Cooperados – COOP63: 759 corridas finalizadas nos primeiros 30 dias',
+    summary: 'Entre os dias 21 de outubro e 21 de novembro, completamos nossos primeiros 30 dias de operação alcançando a marca de 759 corridas finalizadas.',
+    content: [
+      'AGRADECIMENTO AOS COOPERADOS – COOP63 🤝🚀',
+      'Hoje temos um motivo especial para agradecer a cada um de vocês que acredita no propósito da COOP63.',
+      'Entre os dias 21 de outubro e 21 de novembro, completamos nossos primeiros 30 dias de operação, alcançando a marca de 759 corridas finalizadas.',
+      'Esse número representa muito mais do que corridas. Representa trabalho, confiança, persistência, união e a coragem de construir um projeto diferente, pensado para valorizar os motoristas e fortalecer o cooperativismo.',
+      'Cada corrida finalizada é uma pequena conquista que contribui para o crescimento da nossa cooperativa. Sabemos que ainda temos muito a melhorar, muitos desafios a superar e um longo caminho pela frente, mas cada passo dado até aqui demonstra que estamos construindo algo real.',
+      'Agradecemos a cada cooperado que acreditou, que colocou o aplicativo para rodar, que atendeu nossos passageiros e que, mesmo diante das dificuldades, continua fazendo parte desse projeto.',
+      '759 corridas finalizadas em 30 dias. Esse é apenas o começo!',
+      'Que possamos continuar crescendo, fortalecendo nossa união e transformando o esforço individual em conquistas coletivas.',
+      'O sucesso da COOP63 depende de cada um de nós. Quanto mais unidos estivermos, mais longe chegaremos.',
+      'Obrigado por fazer parte dessa história!',
+      '🚘 COOP63 — Mobilidade que conecta. 💚'
+    ],
+    date: '22 de novembro de 2026',
+    isoDate: '2026-11-22',
+    readTime: '3 min de leitura'
+  },
+  {
     id: 12,
     slug: 'promocao-10-reais-credito-coop63-mais-2000-passageiros-cadastrados',
     image: '/assets/aistudio/promocao10_a0a1ff38.jpeg',
