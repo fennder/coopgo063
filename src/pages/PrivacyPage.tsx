@@ -279,6 +279,20 @@ export function PrivacyPage() {
                       <td className="p-3">1 ano</td>
                       <td className="p-3 font-mono text-[10px]">SameSite=Lax; Path=/</td>
                     </tr>
+                    <tr>
+                      <td className="p-3 font-mono font-bold text-brand-navy">coop63_seen_comunicados</td>
+                      <td className="p-3 font-semibold text-emerald-600">Necessário</td>
+                      <td className="p-3">Evita reexibir pop-ups de comunicados oficiais já lidos pelo usuário.</td>
+                      <td className="p-3">1 ano</td>
+                      <td className="p-3 font-mono text-[10px]">SameSite=Lax; Path=/</td>
+                    </tr>
+                    <tr>
+                      <td className="p-3 font-mono font-bold text-brand-navy">_ga / _ga_*</td>
+                      <td className="p-3 font-semibold text-purple-600">Analítico</td>
+                      <td className="p-3">Estatísticas agregadas de acesso via Google Analytics 4 (ativado somente após o seu consentimento explícito no banner de cookies).</td>
+                      <td className="p-3">Até 2 anos</td>
+                      <td className="p-3 font-mono text-[10px]">SameSite=Lax; Secure</td>
+                    </tr>
                   </tbody>
                 </table>
               </div>

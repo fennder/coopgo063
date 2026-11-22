@@ -167,4 +167,12 @@ export function saveConsent(settings: Omit<CookieConsentSettings, 'timestamp'>):
     path: '/',
     sameSite: 'Lax',
   });
+
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(
+      new CustomEvent<CookieConsentSettings>('coop63_cookie_consent_updated', {
+        detail: payload,
+      })
+    );
+  }
 }

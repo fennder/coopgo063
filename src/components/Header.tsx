@@ -17,6 +17,7 @@ import {
   Sparkles
 } from 'lucide-react';
 import { Logo } from './Logo';
+import { trackEvent } from '../utils/analytics';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -318,7 +319,14 @@ export function Header() {
                   href="https://play.google.com/store/apps/details?id=br.com.coop63.passenger.drivermachine&pcampaignid=web_share"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    trackEvent('app_download_click', {
+                      app_type: 'passageiro',
+                      store: 'google_play',
+                      placement: 'mobile_drawer',
+                    });
+                  }}
                   className="flex items-center justify-center gap-2 p-2.5 rounded-xl bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
                 >
                   <Download className="w-4 h-4 text-brand-green" />
@@ -328,7 +336,14 @@ export function Header() {
                   href="https://play.google.com/store/apps/details?id=br.com.coop63.taxi.drivermachine&pcampaignid=web_share"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    trackEvent('app_download_click', {
+                      app_type: 'motorista',
+                      store: 'google_play',
+                      placement: 'mobile_drawer',
+                    });
+                  }}
                   className="flex items-center justify-center gap-2 p-2.5 rounded-xl bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
                 >
                   <Download className="w-4 h-4 text-brand-green" />

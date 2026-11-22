@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
+import { trackEvent } from '../utils/analytics';
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -29,6 +30,10 @@ export function Contact() {
     };
 
     const subjectText = subjectLabels[formData.subject] || formData.subject || 'Contato Geral';
+
+    trackEvent('contact_form_submit', {
+      subject: subjectText,
+    });
 
     const text =
       `*Olá, Coop63! Mensagem enviada pelo site:*\n\n` +
@@ -66,6 +71,11 @@ export function Contact() {
                 <p className="text-gray-600 text-sm mb-2 font-medium">(63) 98498-4085</p>
                 <a
                   href="https://wa.me/5563984984085?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20Coop63!"
+                  onClick={() =>
+                    trackEvent('whatsapp_contact_click', {
+                      placement: 'contact_card',
+                    })
+                  }
                   className="inline-flex items-center gap-1.5 text-brand-green hover:text-brand-green-hover font-bold text-sm transition-colors"
                 >
                   <span>Chamar no WhatsApp</span>

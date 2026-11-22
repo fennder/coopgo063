@@ -93,6 +93,24 @@ Site institucional, central de notícias e portal de captação para passageiros
 
 ---
 
+## Google Analytics 4 (GA4) e LGPD
+
+O portal está preparado para o **Google Analytics 4** com integração nativa ao **Google Consent Mode v2** e ao banner de cookies (`CookieConsentBanner`):
+
+1. Crie ou edite o arquivo `.env` local (ou configure as variáveis de ambiente no painel da Netlify) e defina o ID da sua propriedade GA4:
+   ```env
+   VITE_GA_MEASUREMENT_ID="G-XXXXXXXXXX"
+   ```
+2. Por padrão (LGPD), o script `gtag.js` **não é carregado** enquanto o visitante não autorizar a categoria **Cookies Analíticos**. Assim que o consentimento é concedido (ou já estiver salvo), o GA4 passa a registrar automaticamente:
+   - `page_view`: navegação SPA em todas as rotas com caminho e título atualizados;
+   - `app_download_click`: cliques para baixar os apps Passageiro e Motorista (`app_type`, `store`, `placement`);
+   - `platform_preference_select`: alternância entre Android e iOS;
+   - `whatsapp_contact_click`: cliques nos canais oficiais de WhatsApp;
+   - `contact_form_submit`: envios pelo formulário de contato (`subject`);
+   - `comunicado_modal_action`: fechamento e abertura de comunicados oficiais (`action`, `comunicado_id`).
+
+---
+
 ## Canais Oficiais da Coop63
 
 - **Site:** [https://coop63.coop.br](https://coop63.coop.br)

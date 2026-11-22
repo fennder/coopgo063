@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Youtube, MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { Logo } from './Logo';
+import { trackEvent } from '../utils/analytics';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -114,6 +115,11 @@ export function Footer() {
 
             <a 
               href="https://wa.me/5563984984085?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20Coop63!"
+              onClick={() =>
+                trackEvent('whatsapp_contact_click', {
+                  placement: 'footer',
+                })
+              }
               className="inline-flex items-center justify-center gap-2 w-full bg-brand-green hover:bg-brand-green-hover text-brand-navy px-6 py-3 rounded-xl font-extrabold transition-colors shadow-md"
             >
               Atendimento WhatsApp

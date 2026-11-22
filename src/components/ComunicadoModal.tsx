@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Megaphone, Calendar, Tag, X, CheckCircle2, ArrowRight } from 'lucide-react';
 import { newsArticles, NewsItem } from '../data/newsData';
 import { getCookie, setCookie } from '../utils/cookies';
+import { trackEvent } from '../utils/analytics';
 
 const SEEN_COMUNICADOS_KEY = 'coop63_seen_comunicados';
 
@@ -77,12 +78,19 @@ export function ComunicadoModal() {
     });
   }, []);
 
-  const handleClose = useCallback(() => {
-    if (latestComunicado) {
-      markComunicadoAsSeen(latestComunicado.id);
-    }
-    setIsOpen(false);
-  }, [latestComunicado]);
+  const handleClose = useCallback(
+    (action: 'close' | 'read_full' = 'close') => {
+      if (latestComunicado) {
+        markComunicadoAsSeen(latestComunicado.id);
+        trackEvent('comunicado_modal_action', {
+          action,
+          comunicado_id: latestComunicado.id,
+        });
+      }
+      setIsOpen(false);
+    },
+    [latestComunicado]
+  );
 
   useEffect(() => {
     if (!latestComunicado) return;
@@ -127,7 +135,7 @@ export function ComunicadoModal() {
   return (
     <div
       className="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 bg-black/75 backdrop-blur-sm animate-in fade-in duration-200"
-      onClick={handleClose}
+      onClick={() => handleClose('close')}
     >
       <div
         role="dialog"
@@ -174,7 +182,7 @@ export function ComunicadoModal() {
 
           <button
             type="button"
-            onClick={handleClose}
+            onClick={() => handleClose('close')}
             aria-label="Fechar comunicado"
             title="Fechar comunicado"
             className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-gray-200 hover:text-white transition-colors shrink-0"
@@ -262,7 +270,7 @@ export function ComunicadoModal() {
         <div className="px-5 sm:px-7 py-4 bg-gray-50 border-t border-gray-200 flex flex-col-reverse sm:flex-row items-stretch sm:items-center justify-between gap-3 shrink-0">
           <Link
             to={`/noticias/${latestComunicado.slug}`}
-            onClick={handleClose}
+            onClick={() => handleClose('read_full')}
             className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-gray-300 bg-white hover:bg-gray-100 text-brand-navy font-bold text-xs sm:text-sm transition-colors"
           >
             <span>Abrir página da notícia</span>
@@ -271,7 +279,7 @@ export function ComunicadoModal() {
 
           <button
             type="button"
-            onClick={handleClose}
+            onClick={() => handleClose('close')}
             className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-brand-green hover:bg-brand-green-hover text-brand-navy font-black text-xs sm:text-sm transition-transform active:scale-95 shadow-md"
           >
             <CheckCircle2 className="w-4 h-4" />

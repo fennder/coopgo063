@@ -1,21 +1,9 @@
 /// <reference types="vite/client" />
 
-declare module '*.jpg' {
-  const content: string;
-  export default content;
+interface ImportMetaEnv {
+  readonly VITE_GA_MEASUREMENT_ID?: string;
 }
 
-declare module '*.jpeg' {
-  const content: string;
-  export default content;
-}
-
-declare module '*.png' {
-  const content: string;
-  export default content;
-}
-
-declare module '*.svg' {
-  const content: string;
-  export default content;
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
 }
