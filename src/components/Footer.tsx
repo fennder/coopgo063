@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Youtube, MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { Logo } from './Logo';
 import { trackEvent } from '../utils/analytics';
+import { hasPartners } from '../data/partnersData';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -61,6 +62,21 @@ export function Footer() {
               <li><Link to="/sobre" className="text-gray-400 hover:text-brand-green transition-colors">Sobre a Coop63</Link></li>
               <li><Link to="/noticias" className="text-gray-400 hover:text-brand-green transition-colors">Notícias e Comunicados</Link></li>
               <li><Link to="/contato" className="text-gray-400 hover:text-brand-green transition-colors">Fale Conosco</Link></li>
+              <li>
+                {hasPartners ? (
+                  <Link to="/parceiros" className="text-gray-400 hover:text-brand-green transition-colors">
+                    Parceiros
+                  </Link>
+                ) : (
+                  <span
+                    aria-disabled="true"
+                    title="Será habilitado quando o primeiro parceiro for cadastrado"
+                    className="text-gray-500 cursor-not-allowed select-none"
+                  >
+                    Parceiros (em breve)
+                  </span>
+                )}
+              </li>
             </ul>
           </div>
 

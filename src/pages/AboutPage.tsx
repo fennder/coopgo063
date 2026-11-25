@@ -79,10 +79,10 @@ export function AboutPage() {
                 <div className="absolute -inset-2 bg-gradient-to-tr from-brand-green/30 to-brand-navy rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition" />
                 <div className="relative w-full rounded-3xl p-6 bg-black border border-brand-green/30 shadow-xl flex items-center justify-center">
                   <img
-                    src="/logo-official.svg"
+                    src="/logo-new-preview.webp"
                     alt="Logo Oficial Coop63"
                     width={384}
-                    height={240}
+                    height={109}
                     loading="lazy"
                     decoding="async"
                     className="w-full h-auto object-contain drop-shadow-md transition-transform duration-500 group-hover:scale-105"

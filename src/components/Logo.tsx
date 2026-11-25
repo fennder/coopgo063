@@ -25,16 +25,16 @@ export function Logo({
     full: 'h-full w-auto max-h-full',
   };
 
-  // Choose the appropriate asset
-  let logoSrc = '/logo-official.svg';
+  // Choose the appropriate asset (staged preview awaiting final approval)
+  let logoSrc = '/logo-new-preview.webp';
   if (variant === 'square') {
     logoSrc = '/logo-square.png';
   } else if (variant === 'light') {
     logoSrc = '/logo-light.svg';
   } else if (inverted || variant === 'dark') {
-    logoSrc = '/logo-dark.svg';
+    logoSrc = '/logo-new-transparent.webp';
   } else {
-    logoSrc = '/logo-official.svg';
+    logoSrc = '/logo-new-preview.webp';
   }
 
   return (

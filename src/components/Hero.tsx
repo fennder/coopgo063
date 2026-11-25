@@ -71,12 +71,12 @@ export function Hero() {
           <div className="hidden lg:flex flex-col items-center justify-center relative shrink-0">
             <div className="relative group w-full max-w-[460px]">
               <div className="absolute -inset-4 bg-gradient-to-r from-brand-green/30 via-brand-green/10 to-transparent rounded-3xl blur-2xl opacity-60 group-hover:opacity-90 transition duration-500" />
-              <div className="relative rounded-3xl p-6 bg-black/90 backdrop-blur-md border border-brand-green/30 shadow-2xl flex items-center justify-center overflow-hidden">
+              <div className="relative rounded-3xl p-6 bg-black backdrop-blur-md border border-brand-green/30 shadow-2xl flex items-center justify-center overflow-hidden">
                 <img
-                  src="/logo-official.svg"
+                  src="/logo-new-preview.webp"
                   alt="Coop63 - Cooperativa de Mobilidade"
                   width={460}
-                  height={280}
+                  height={130}
                   fetchPriority="high"
                   loading="eager"
                   className="w-full h-auto object-contain drop-shadow-2xl transition-transform duration-500 group-hover:scale-105"

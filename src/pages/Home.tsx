@@ -8,6 +8,7 @@ import { News } from '../components/News';
 import { AppDownload } from '../components/AppDownload';
 import { CTA } from '../components/CTA';
 import { Contact } from '../components/Contact';
+import { Partners } from '../components/Partners';
 import { SeoHead } from '../components/SeoHead';
 
 export function Home() {
@@ -29,6 +30,7 @@ export function Home() {
       <News />
       <CTA />
       <Contact />
+      <Partners />
     </>
   );
 }

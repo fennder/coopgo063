@@ -21,6 +21,32 @@ export interface NewsItem {
 
 export const newsArticles: NewsItem[] = [
   {
+    id: 14,
+    slug: 'janeirao-2027-coop63-sem-passe-taxa-zero-km-mais-bem-pago',
+    image: '/assets/aistudio/WhatsApp_Image_2026-11-24_at_10.44.41_40e5c99b.jpeg',
+    category: 'Comunicado',
+    categories: ['Comunicado', 'Motoristas'],
+    title: 'Janeirão 2027 COOP63: em mês de férias e recesso, faz sentido pagar para rodar?',
+    summary: 'Com férias escolares e universitárias, recesso de órgãos públicos e redução da demanda de corridas, a COOP63 garante Sem Passe, Taxa Zero (0%) e KM mais bem pago para o dinheiro da mobilidade ficar em Palmas.',
+    content: [
+      'JANEIRÃO 2027 — COOP63: UM MÊS DE ALÍVIO PARA O MOTORISTA E MAIS DINHEIRO CIRCULANDO EM PALMAS 🚘💚',
+      'Todo motorista de aplicativo conhece bem a realidade de janeiro em Palmas e no Tocantins. Chegam as férias escolares e universitárias, acontece o recesso de alguns poderes, órgãos e entidades do governo e, naturalmente, ocorre a redução da demanda de corridas pela cidade.',
+      'Diante disso, vale parar e fazer uma pergunta direta que todo condutor já pensou no volante: faz sentido pagar para rodar nesse cenário?',
+      'Quando o movimento cai, ter que pagar passe antecipado ou perder parte do ganho em taxas pesadas significa tirar dinheiro do próprio bolso antes mesmo de saber quantas corridas o dia vai render. Não é justo trabalhar dobrado apenas para cobrir cobranças fixas enquanto a cidade está em ritmo de férias.',
+      '### A resposta da COOP63: em janeiro, não pague para trabalhar',
+      'Pensando exatamente em quem está todos os dias nas ruas, a COOP63 apresenta o Janeirão 2027 — um mês de alívio real para o motorista cooperado e de fortalecimento da economia palmense:',
+      '• Sem Passe: você não precisa desembolsar valores antecipados ou pagar assinatura para poder aceitar corridas.\n• Taxa Zero (0%): 0% de comissão — você não divide o seu esforço em momentos de menor movimento.\n• KM Mais Bem Pago: valorização justa pelo quilômetro rodado para proteger a rentabilidade do motorista.',
+      '### Mais renda para você e mais recursos na economia local',
+      'Na COOP63, a conta fecha a favor de quem dirige e da nossa própria cidade. O dinheiro da mobilidade fica em Palmas, valorizando nossa cidade, girando no comércio local e gerando mais renda para você e sua família.',
+      'Se o cenário é de menos corridas por causa das férias e do recesso, a escolha mais inteligente é rodar onde você não paga para trabalhar.',
+      'EM JANEIRO, NÃO PAGUE PARA TRABALHAR. RODE COM A COOP63.',
+      'COOP63 | Mobilidade que conecta. Economia que fica.'
+    ],
+    date: '24 de novembro de 2026',
+    isoDate: '2026-11-24',
+    readTime: '3 min de leitura'
+  },
+  {
     id: 13,
     slug: 'agradecimento-aos-cooperados-coop63-759-corridas-30-dias',
     image: newsAppImg,

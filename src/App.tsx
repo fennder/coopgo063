@@ -14,6 +14,7 @@ const AboutPage = lazy(() => import('./pages/AboutPage').then((m) => ({ default:
 const NewsPage = lazy(() => import('./pages/NewsPage').then((m) => ({ default: m.NewsPage })));
 const NewsDetailPage = lazy(() => import('./pages/NewsDetailPage').then((m) => ({ default: m.NewsDetailPage })));
 const ContactPage = lazy(() => import('./pages/ContactPage').then((m) => ({ default: m.ContactPage })));
+const PartnersPage = lazy(() => import('./pages/PartnersPage').then((m) => ({ default: m.PartnersPage })));
 const TermsPage = lazy(() => import('./pages/TermsPage').then((m) => ({ default: m.TermsPage })));
 const PrivacyPage = lazy(() => import('./pages/PrivacyPage').then((m) => ({ default: m.PrivacyPage })));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then((m) => ({ default: m.NotFoundPage })));
@@ -42,6 +43,7 @@ const router = createBrowserRouter([
       { path: "noticias", element: withSuspense(<NewsPage />) },
       { path: "noticias/:id", element: withSuspense(<NewsDetailPage />) },
       { path: "contato", element: withSuspense(<ContactPage />) },
+      { path: "parceiros", element: withSuspense(<PartnersPage />) },
       { path: "termos", element: withSuspense(<TermsPage />) },
       { path: "privacidade", element: withSuspense(<PrivacyPage />) },
       { path: "*", element: withSuspense(<NotFoundPage />) },

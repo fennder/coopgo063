@@ -14,10 +14,12 @@ import {
   Globe, 
   Download, 
   ShieldCheck,
-  Sparkles
+  Sparkles,
+  Handshake
 } from 'lucide-react';
 import { Logo } from './Logo';
 import { trackEvent } from '../utils/analytics';
+import { hasPartners } from '../data/partnersData';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -60,13 +62,20 @@ export function Header() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isMobileMenuOpen]);
 
-  const navLinks = [
+  const navLinks: Array<{
+    label: string;
+    href: string;
+    icon: typeof Home;
+    badge?: string;
+    disabled?: boolean;
+  }> = [
     { label: 'Início', href: '/', icon: Home },
     { label: 'Passageiros', href: '/passageiros', icon: User },
     { label: 'Motoristas', href: '/motoristas', icon: Car },
     { label: 'A Coop63', href: '/sobre', icon: Building2 },
     { label: 'Notícias', href: '/noticias', icon: Newspaper, badge: 'Novidades' },
     { label: 'Contato', href: '/contato', icon: MessageCircle },
+    { label: 'Parceiros', href: '/parceiros', icon: Handshake, disabled: !hasPartners },
   ];
 
   return (
@@ -85,34 +94,44 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
-            <ul className="flex items-center gap-7">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
+            <ul className="flex items-center gap-4 xl:gap-6">
               {navLinks.map((link) => (
                 <li key={link.label}>
-                  <NavLink
-                    to={link.href}
-                    end={link.href === '/'}
-                    className={({ isActive }) =>
-                      `relative py-2 text-sm uppercase tracking-wide transition-colors ${
-                        isActive ? 'text-brand-navy font-black' : 'text-brand-navy hover:text-brand-green font-medium'
-                      }`
-                    }
-                  >
-                    {({ isActive }) => (
-                      <>
-                        <span>{link.label}</span>
-                        {isActive && (
-                          <span className="absolute -bottom-1 left-0 right-0 h-1 bg-brand-green rounded-full" />
-                        )}
-                      </>
-                    )}
-                  </NavLink>
+                  {link.disabled ? (
+                    <span
+                      aria-disabled="true"
+                      title="Será habilitado quando o primeiro parceiro for cadastrado"
+                      className="relative py-2 text-sm uppercase tracking-wide text-gray-400 font-medium cursor-not-allowed select-none opacity-65"
+                    >
+                      {link.label}
+                    </span>
+                  ) : (
+                    <NavLink
+                      to={link.href}
+                      end={link.href === '/'}
+                      className={({ isActive }) =>
+                        `relative py-2 text-sm uppercase tracking-wide transition-colors ${
+                          isActive ? 'text-brand-navy font-black' : 'text-brand-navy hover:text-brand-green font-medium'
+                        }`
+                      }
+                    >
+                      {({ isActive }) => (
+                        <>
+                          <span>{link.label}</span>
+                          {isActive && (
+                            <span className="absolute -bottom-1 left-0 right-0 h-1 bg-brand-green rounded-full" />
+                          )}
+                        </>
+                      )}
+                    </NavLink>
+                  )}
                 </li>
               ))}
             </ul>
             <Link
               to="/contato"
-              className="flex items-center gap-2 bg-brand-green hover:bg-brand-green-hover text-brand-navy px-5 py-2.5 rounded-full font-extrabold transition-transform hover:scale-105 shadow-sm text-sm"
+              className="flex items-center gap-2 bg-brand-green hover:bg-brand-green-hover text-brand-navy px-5 py-2.5 rounded-full font-extrabold transition-transform hover:scale-105 shadow-sm text-sm shrink-0"
             >
               <MessageCircle className="w-4 h-4 text-brand-navy" />
               <span>Fale Conosco</span>
@@ -166,9 +185,9 @@ export function Header() {
           {/* Drawer Top Header */}
           <div className="p-5 flex items-center justify-between border-b border-white/10 bg-brand-navy-light/60">
             <div className="flex items-center gap-2.5">
-              <div className="p-2 bg-black/40 rounded-xl border border-white/10">
+              <div className="p-2 bg-black rounded-xl border border-white/10">
                 <img
-                  src="/logo-official.svg"
+                  src="/logo-new-preview.webp"
                   alt="Coop63"
                   className="h-8 w-auto object-contain"
                 />
@@ -269,6 +288,24 @@ export function Header() {
               <nav className="space-y-1.5">
                 {navLinks.map((item) => {
                   const Icon = item.icon;
+                  if (item.disabled) {
+                    return (
+                      <div
+                        key={item.label}
+                        aria-disabled="true"
+                        title="Será habilitado quando o primeiro parceiro for cadastrado"
+                        className="flex items-center justify-between px-3.5 py-3 rounded-xl text-gray-500 font-medium cursor-not-allowed select-none opacity-65"
+                      >
+                        <div className="flex items-center gap-3">
+                          <Icon className="w-5 h-5 text-current opacity-60" />
+                          <span className="text-sm">{item.label}</span>
+                        </div>
+                        <span className="text-[10px] font-semibold uppercase tracking-wider text-gray-400">
+                          Em breve
+                        </span>
+                      </div>
+                    );
+                  }
                   return (
                     <NavLink
                       key={item.label}

@@ -194,13 +194,17 @@ export function ComunicadoModal() {
         {/* Corpo com rolagem para leitura completa */}
         <div className="p-5 sm:p-7 overflow-y-auto space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed">
           {latestComunicado.image && (
-            <div className="relative rounded-2xl overflow-hidden bg-brand-navy/95 h-44 sm:h-52 flex items-center justify-center shadow-md mb-2">
+            <div className="relative rounded-2xl overflow-hidden bg-brand-navy/95 min-h-[200px] max-h-80 flex items-center justify-center shadow-md mb-2 p-2">
+              <div
+                className="absolute inset-0 bg-cover bg-center filter blur-xl opacity-35 scale-110 pointer-events-none"
+                style={{ backgroundImage: `url(${latestComunicado.image})` }}
+                aria-hidden="true"
+              />
               <img
                 src={latestComunicado.image}
                 alt={latestComunicado.title}
-                className="w-full h-full object-cover"
+                className="relative z-10 w-auto h-auto max-h-72 max-w-full object-contain rounded-xl shadow-lg"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/50 via-transparent to-transparent pointer-events-none" />
             </div>
           )}
 
