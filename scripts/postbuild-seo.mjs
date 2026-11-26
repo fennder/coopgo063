@@ -84,6 +84,7 @@ function generateSitemapXml(articles) {
     { loc: `${ORIGIN}/noticias`, lastmod: TODAY_ISO, changefreq: 'daily', priority: '0.8' },
     { loc: `${ORIGIN}/sobre`, lastmod: TODAY_ISO, changefreq: 'monthly', priority: '0.7' },
     { loc: `${ORIGIN}/contato`, lastmod: TODAY_ISO, changefreq: 'monthly', priority: '0.7' },
+    { loc: `${ORIGIN}/parceiros`, lastmod: TODAY_ISO, changefreq: 'monthly', priority: '0.7' },
   ];
 
   const articleUrls = articles.map((article) => ({
@@ -304,6 +305,20 @@ async function main() {
           ],
         },
       ],
+    },
+    {
+      outputPath: 'parceiros',
+      canonicalPath: '/parceiros',
+      title: 'Parceiros | Coop63',
+      description: 'Conheça os parceiros institucionais da Coop63.',
+      image: `${ORIGIN}/og-image.jpg`,
+      jsonLd: {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Início', item: `${ORIGIN}/` },
+          { '@type': 'ListItem', position: 2, name: 'Parceiros', item: `${ORIGIN}/parceiros` },
+        ],
+      },
     },
     {
       outputPath: 'termos',
