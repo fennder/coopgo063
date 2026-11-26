@@ -21,6 +21,28 @@ export interface NewsItem {
 
 export const newsArticles: NewsItem[] = [
   {
+    id: 15,
+    slug: 'visita-institucional-da-ocb-sede-coop63',
+    image: '/assets/aistudio/WhatsApp_Image_2026-11-26_at_11.17.47__1__4bb5f274.jpeg',
+    category: 'Comunicado',
+    categories: ['Coop63', 'Comunicado'],
+    title: 'Visita Institucional da OCB reforça apoio e integração com a COOP63',
+    summary: 'Recebemos em nossa sede a visita institucional da Organização das Cooperativas Brasileiras (OCB), entidade à qual a COOP63 é filiada, em um importante momento de diálogo e fortalecimento do cooperativismo.',
+    content: [
+      'VISITA INSTITUCIONAL DA OCB!',
+      'Recebemos, em nossa sede, a visita institucional da Organização das Cooperativas Brasileiras (OCB), entidade à qual a COOP63 é filiada, em um importante momento de diálogo, aproximação e fortalecimento dos laços que sustentam o movimento cooperativista.',
+      'A visita reafirma, sobretudo, o apoio institucional da OCB ao nosso projeto, fortalecendo nossa caminhada e demonstrando a importância do acompanhamento, da orientação e da integração com o sistema cooperativista.',
+      'IMAGE:/assets/aistudio/WhatsApp_Image_2026-11-26_at_11.17.47_e5839f74.jpeg | Reunião institucional na sede da COOP63 durante a visita da Organização das Cooperativas Brasileiras (OCB)',
+      'Acreditamos que os caminhos que estamos trilhando estão alinhados com o futuro do cooperativismo: um modelo em que as pessoas são protagonistas, o desenvolvimento econômico gera benefícios coletivos e os resultados contribuem diretamente para a transformação social.',
+      'A COOP63 nasceu com o propósito de construir uma nova realidade para a mobilidade urbana, valorizando o trabalho, fortalecendo a economia local e promovendo prosperidade compartilhada.',
+      'Agradecemos à OCB pela presença, confiança e apoio institucional. Seguimos juntos, com a convicção de que cooperar é construir um futuro em que todos têm a oportunidade de crescer.',
+      'COOP63 – Mobilidade que conecta. Prosperidade que transforma!'
+    ],
+    date: '26 de novembro de 2026',
+    isoDate: '2026-11-26',
+    readTime: '3 min de leitura'
+  },
+  {
     id: 14,
     slug: 'janeirao-2027-coop63-sem-passe-taxa-zero-km-mais-bem-pago',
     image: '/assets/aistudio/WhatsApp_Image_2026-11-24_at_10.44.41_40e5c99b.jpeg',
